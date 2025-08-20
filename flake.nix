@@ -21,6 +21,7 @@
                 inherit system;
 
                 modules = [
+                    ./modules
                     ./hosts/nousad
                     
                     home-manager.nixosModules.home-manager {
