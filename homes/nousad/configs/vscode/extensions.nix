@@ -17,6 +17,7 @@
         bierner.markdown-preview-github-styles
         streetsidesoftware.code-spell-checker
         bbenoist.nix
+        foxundermoon.shell-format
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
             publisher = "roonie007";
