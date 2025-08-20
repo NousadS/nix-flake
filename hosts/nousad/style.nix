@@ -3,6 +3,10 @@
 {
     stylix.enable = true;
 
+    stylix.targets = {
+        ghostty.enable = true;
+    };
+
     stylix.image = ../../wallpapers/venator-left.png;
 
     # stylix.base16Scheme = ../homes/nousad/configs/stylix/scheme.yaml
