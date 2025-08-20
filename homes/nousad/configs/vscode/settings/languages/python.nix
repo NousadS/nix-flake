@@ -8,22 +8,22 @@
                 autoImportCompletions = true;
 
                 diagnosticSeverityOverrides = {
-                    "reportUndefinedVariable" = "none";
+                    reportUndefinedVariable = "none";
                 };
             };
 
             languageServer = "Pylance";
-            "python.defaultInterpreterPath = "/usr/bin/python";
+            python.defaultInterpreterPath = "/usr/bin/python";
         };
 
         "[python]" = {
-            "editor.formatOnSave" = true;
-            "editor.defaultFormatter" = "charliermarsh.ruff";
+            editor.formatOnSave = true;
+            editor.defaultFormatter = "charliermarsh.ruff";
         };
 
         ruff = {
             organizeImports = true;
-            exclude = [];
+            exclude = [ ];
 
             lint.ignore = [
                 "F401"

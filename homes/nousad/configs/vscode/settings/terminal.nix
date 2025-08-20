@@ -4,19 +4,19 @@
     programs.vscode.userSettings = {
         terminal = {
             integrated = {
-                cursorStyle = "underline",
-                cursorStyleInactive = "underline",
+                cursorStyle = "underline";
+                cursorStyleInactive = "underline";
 
-                fontFamily = "'Fira Code', 'MesloLGS NF'",
-                fontLigatures = true,
-                fontSize = 11,
+                fontFamily = "'Fira Code', 'MesloLGS NF'";
+                fontLigatures = true;
+                fontSize = 11;
 
-                defaultProfile.windows" = "Command Prompt",
-                defaultProfile.linux = "zsh",
+                defaultProfile.windows = "Command Prompt";
+                defaultProfile.linux = "zsh";
             };
 
-            explorerKind = "external",
-            external.linuxExec = "/usr/bin/zsh",
+            explorerKind = "external";
+            external.linuxExec = "/usr/bin/zsh";
         };
     };
 }

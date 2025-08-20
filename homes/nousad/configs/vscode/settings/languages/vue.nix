@@ -5,6 +5,6 @@
         "[vue]" = {
             editor.tabSize = 4;
             editor.defaultFormatter = "Vue.volar";
-        },
+        };
     };
 }

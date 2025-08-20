@@ -40,7 +40,7 @@
                         "base" = "core";
                         "color" = "orange-500";
                         "lightColor" = "orange-700";
-                        "folderNames" = [ compiler" ];
+                        "folderNames" = [ "compiler" ];
                     }
                     {
                         "name" = "dreambeard";

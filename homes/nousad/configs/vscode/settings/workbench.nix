@@ -3,14 +3,14 @@
 {
     programs.vscode.userSettings = {
         workbench = {
-            iconTheme: "material-icon-theme";
-            colorTheme: "Kolada";
+            iconTheme = "material-icon-theme";
+            colorTheme = "Kolada";
 
-            # colorCustomizations: {
-            #     "editorSuggestWidget.background": "#000000"
+            # colorCustomizations = {
+            #     "editorSuggestWidget.background" = "#000000";
             # };
 
-            startupEditor: "none";
+            startupEditor = "none";
         };
     };
 }
