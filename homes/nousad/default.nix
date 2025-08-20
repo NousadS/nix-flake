@@ -3,8 +3,9 @@
 {
     imports = [
         ./configs
+        ./desktops
+        
         ./environment.nix
-        ./gnome.nix
         ./user.nix
     ];
 }
