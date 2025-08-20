@@ -101,6 +101,13 @@
                         "lightColor" = "green-500";
                         "folderNames" = [ "storage" ];
                     }
+                    {
+                        "name" = "desktops";
+                        "base" = "desktop";
+                        "color" = "green-500";
+                        "lightColor" = "green-500";
+                        "folderNames" = [ "desktops" ];
+                    }
                 ];
             };
         };

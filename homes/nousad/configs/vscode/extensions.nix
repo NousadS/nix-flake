@@ -16,6 +16,7 @@
         leonardssh.vscord
         bierner.markdown-preview-github-styles
         streetsidesoftware.code-spell-checker
+        bbenoist.nix
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
             publisher = "roonie007";
