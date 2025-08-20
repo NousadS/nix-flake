@@ -13,6 +13,9 @@
         wmaurer.change-case
         codezombiech.gitignore
         pkief.material-icon-theme
+        leonardssh.vscord
+        bierner.markdown-preview-github-styles
+        streetsidesoftware.code-spell-checker
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
             publisher = "roonie007";
@@ -42,6 +45,30 @@
             publisher = "wassim-k";
             name = "rename-replace-extension";
             version = "0.1.1";
+            sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+        }
+        {
+            publisher = "streetsidesoftware";
+            name = "code-spell-checker-russian";
+            version = "2.2.4";
+            sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+        }
+        {
+            publisher = "streetsidesoftware";
+            name = "code-spell-checker-german";
+            version = "2.3.4";
+            sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+        }
+        {
+            publisher = "streetsidesoftware";
+            name = "code-spell-checker-latin";
+            version = "1.0.5";
+            sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+        }
+        {
+            publisher = "streetsidesoftware";
+            name = "code-spell-checker-ancient-greek";
+            version = "1.0.5";
             sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
         }
     ];

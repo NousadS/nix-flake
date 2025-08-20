@@ -2,6 +2,6 @@
 
 {
     programs.vscode.userSettings = {
-        
+        vscord.status.idle.disconnectOnIdle = true;
     };
 }
