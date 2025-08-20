@@ -30,10 +30,7 @@
 
                         home-manager.backupFileExtension = "backup";
 
-                        home-manager.extraSpecialArgs = { 
-                            inherit stylix config;
-                            cfg = config.modules;
-                        };
+                        home-manager.extraSpecialArgs = { inherit stylix; };
 
                         home-manager.users.nousad = import ./homes/nousad;
                     }

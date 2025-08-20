@@ -1,13 +1,11 @@
-{ config, cfg, lib, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
-    config = lib.mkIf cfg.enable {
-        imports = [
-            ./extensions.nix
-            ./keybinds.nix
-            ./settings
-        ];
+    imports = [
+        ./extensions.nix
+        ./keybinds.nix
+        ./settings
+    ];
 
-        programs.vscode.enable = true;
-    };
+    programs.vscode.enable = true;
 }
