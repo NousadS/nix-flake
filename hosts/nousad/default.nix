@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
-{
+let 
+    cfg = config.modules;
+in {
     imports = [
         ../../modules
 
@@ -17,26 +19,26 @@
         ./users.nix
     ];
 
-    browsers.chrome.enable = true;
-    browsers.firefox.enable = false;
+    cfg.browsers.chrome.enable = true;
+    cfg.browsers.firefox.enable = false;
 
-    commands.gh.enable = true;
-    commands.git.enable = true;
-    commands.tree.enable = true;
+    cfg.commands.gh.enable = true;
+    cfg.commands.git.enable = true;
+    cfg.commands.tree.enable = true;
 
-    editors.micro.enable = true;
-    editors.nvim.enable = true;
-    editors.vscode.enable = true;
+    cfg.editors.micro.enable = true;
+    cfg.editors.nvim.enable = true;
+    cfg.editors.vscode.enable = true;
 
-    fetches.fastfetch.enable = true;
-    fetches.neofetch.enable = false;
-    fetches.owofetch.enable = false;
-    fetches.pfetch.enable = false;
+    cfg.fetches.fastfetch.enable = true;
+    cfg.fetches.neofetch.enable = false;
+    cfg.fetches.owofetch.enable = false;
+    cfg.fetches.pfetch.enable = false;
 
-    languages.python.enable = true;
+    cfg.languages.python.enable = true;
 
-    shells.zsh.enable = true;
+    cfg.shells.zsh.enable = true;
 
-    terminals.alacritty.enable = false;
-    terminals.ghostty.enable = true;
+    cfg.terminals.alacritty.enable = false;
+    cfg.terminals.ghostty.enable = true;
 }

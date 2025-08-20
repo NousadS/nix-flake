@@ -1,10 +1,10 @@
 { config, lib, pkgs, ... }:
 
 let
-    cfg = config.editors.vscode;
+    cfg = config.modules.editors.vscode;
 in {
     options = {
-        editors.vscode.enable = lib.mkEnableOption "enables editors.vscode";
+        modules.editors.vscode.enable = lib.mkEnableOption "enables editors.vscode";
     };
     
     config = lib.mkIf cfg.enable {

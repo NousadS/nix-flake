@@ -1,9 +1,9 @@
 { config, lib, pkgs, ... }:
 
 let
-    cfg = config.SUBMODULE.MODULE;
+    cfg = config.modules.SUBMODULE.MODULE;
 in {
-    # add to config.nix: SUBMODULE.MODULE.enable = lib.mkEnableOption "enables SUBMODULE.MODULE";
+    # add to config.nix: modules.SUBMODULE.MODULE.enable = lib.mkEnableOption "enables SUBMODULE.MODULE";
 
     config = lib.mkIf cfg.enable {
         imports = [ ];

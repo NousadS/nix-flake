@@ -1,10 +1,10 @@
 { config, lib, pkgs, ... }:
 
 let
-    cfg = config.editors.micro;
+    cfg = config.modules.editors.micro;
 in {
     options = {
-        editors.micro.enable = lib.mkEnableOption "enables editors.micro";
+        modules.editors.micro.enable = lib.mkEnableOption "enables editors.micro";
     };
     
     config = lib.mkIf cfg.enable {

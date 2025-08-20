@@ -1,10 +1,10 @@
 { config, lib, pkgs, ... }:
 
 let
-    cfg = config.shells.zsh;
+    cfg = config.modules.shells.zsh;
 in {
     options = {
-        shells.zsh.enable = lib.mkEnableOption "enables shells.zsh";
+        modules.shells.zsh.enable = lib.mkEnableOption "enables shells.zsh";
     };
 
     config = lib.mkIf cfg.enable {

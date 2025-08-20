@@ -1,10 +1,10 @@
 { config, lib, pkgs, ... }:
 
 let
-    cfg = config.fetches.neofetch;
+    cfg = config.modules.fetches.neofetch;
 in {
     options = {
-        fetches.neofetch.enable = lib.mkEnableOption "enables fetches.neofetch";
+        modules.fetches.neofetch.enable = lib.mkEnableOption "enables fetches.neofetch";
     };
     
     config = lib.mkIf cfg.enable {

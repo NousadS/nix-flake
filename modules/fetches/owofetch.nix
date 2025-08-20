@@ -1,10 +1,10 @@
 { config, lib, pkgs, ... }:
 
 let
-    cfg = config.fetches.owofetch;
+    cfg = config.modules.fetches.owofetch;
 in {
     options = {
-        fetches.owofetch.enable = lib.mkEnableOption "enables fetches.owofetch";
+        modules.fetches.owofetch.enable = lib.mkEnableOption "enables fetches.owofetch";
     };
     
     config = lib.mkIf cfg.enable {

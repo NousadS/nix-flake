@@ -1,10 +1,10 @@
 { config, lib, pkgs, ... }:
 
 let
-    cfg = config.commands.gh;
+    cfg = config.modules.commands.gh;
 in {
     options = {
-        commands.gh.enable = lib.mkEnableOption "enables commands.gh";
+        modules.commands.gh.enable = lib.mkEnableOption "enables commands.gh";
     };
     
     config = lib.mkIf cfg.enable {

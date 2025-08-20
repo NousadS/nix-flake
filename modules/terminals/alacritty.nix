@@ -1,10 +1,10 @@
 { config, lib, pkgs, ... }:
 
 let
-    cfg = config.terminals.alacritty;
+    cfg = config.modules.terminals.alacritty;
 in {
     options = {
-        terminals.alacritty.enable = lib.mkEnableOption "enables terminals.alacritty";
+        modules.terminals.alacritty.enable = lib.mkEnableOption "enables terminals.alacritty";
     };
     
     config = lib.mkIf cfg.enable {

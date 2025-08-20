@@ -1,10 +1,10 @@
 { config, lib, pkgs, ... }:
 
 let
-    cfg = config.fetches.pfetch;
+    cfg = config.modules.fetches.pfetch;
 in {
     options = {
-        fetches.pfetch.enable = lib.mkEnableOption "enables fetches.pfetch";
+        modules.fetches.pfetch.enable = lib.mkEnableOption "enables fetches.pfetch";
     };
     
     config = lib.mkIf cfg.enable {
