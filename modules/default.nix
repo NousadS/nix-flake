@@ -13,6 +13,11 @@
         ./editors/nvim.nix
         ./editors/vscode.nix
 
+        ./fetches/fastfetch.nix
+        ./fetches/neofetch.nix
+        ./fetches/owofetch.nix
+        ./fetches/pfetch.nix
+
         ./languages/python.nix
 
         ./shells/zsh.nix
