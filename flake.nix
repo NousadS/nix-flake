@@ -22,8 +22,10 @@
 
                 modules = [
                     ./modules
+
+                    stylix.nixosModules.stylix
+
                     ./hosts/nousad
-                    
                     home-manager.nixosModules.home-manager {
                         home-manager.useGlobalPkgs = true;
                         home-manager.useUserPackages = true;
@@ -34,8 +36,6 @@
 
                         home-manager.users.nousad = import ./homes/nousad;
                     }
-
-                    stylix.nixosModules.stylix
                 ];
             };
         };
