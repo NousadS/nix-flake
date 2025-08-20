@@ -29,14 +29,14 @@
     editors.vscode.enable = true;
 
     fetches.fastfetch.enable = true;
-    fetches.neofetch.enable = true;
-    fetches.owofetch.enable = true;
-    fetches.pfetch.enable = true;
+    fetches.neofetch.enable = false;
+    fetches.owofetch.enable = false;
+    fetches.pfetch.enable = false;
 
     languages.python.enable = true;
 
     shells.zsh.enable = true;
 
-    terminals.alacritty.enable = true;
+    terminals.alacritty.enable = false;
     terminals.ghostty.enable = true;
 }
