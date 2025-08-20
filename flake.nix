@@ -31,7 +31,7 @@
                         home-manager.backupFileExtension = "backup";
 
                         home-manager.extraSpecialArgs = { 
-                            inherit stylix;
+                            inherit stylix config;
                             cfg = config.modules;
                         };
 
