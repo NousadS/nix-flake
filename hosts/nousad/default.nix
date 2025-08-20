@@ -33,7 +33,7 @@
     fetches.owofetch.enable = true;
     fetches.pfetch.enable = true;
 
-    shells.python.enable = true;
+    languages.python.enable = true;
 
     shells.zsh.enable = true;
 
