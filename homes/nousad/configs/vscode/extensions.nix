@@ -3,35 +3,46 @@
 {
     programs.vscode.extensions = with pkgs.vscode-extensions; [
         brettm12345.nixfmt-vscode
-        zhuangtongfa.material-theme
-        github.github-vscode-theme
-        # roonie007.hide-files
-        # jannisx11.batch-rename-extension
-        # ultram4rine.vscode-choosealicense
-        # ritwickdey.liveserver
-        # zeithaste.cursorcharcode
-        # aaron-bond.better-comments
-        # christian-kohler.path-intellisense
-        # funkyremi.vscode-google-translate
-        # johnpapa.vscode-peacock
-        # ms-vscode.hexeditor
-        # monish.regexsnippets
-        # adpyke.codesnap
-        # andreacombette.smoothburn
-        # esbenp.prettier-vscode
-        # wmaurer.change-case
+        ritwickdey.liveserver
+        aaron-bond.better-comments
+        christian-kohler.path-intellisense
+        funkyremi.vscode-google-translate
+        ms-vscode.hexeditor
+        adpyke.codesnap
+        esbenp.prettier-vscode
+        wmaurer.change-case
+        codezombiech.gitignore
+        pkief.material-icon-theme
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
-            name = "beardedtheme";
-            publisher = "beardedbear";
-            version = "10.1.0";
-            sha256 = "sha256-7MkvLEadzgB7af01lYibEOqHn9bvzlpgMTEiiQBlEzA=";
+            publisher = "roonie007";
+            name = "hide-files";
+            version = "11.0.3";
+            sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
         }
-        # {
-        #     name = "cpptools-themes";
-        #     publisher = "ms-vscode";
-        #     version = "10.1.0";
-        #     sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
-        # }
+        {
+            publisher = "jannisx11";
+            name = "batch-rename-extension";
+            version = "0.0.6";
+            sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+        }
+        {
+            publisher = "zeithaste";
+            name = "cursorcharcode";
+            version = "0.2.5";
+            sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+        }
+        {
+            publisher = "ultram4rine";
+            name = "vscode-choosealicense";
+            version = "0.9.4";
+            sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+        }
+        {
+            publisher = "wassim-k";
+            name = "rename-replace-extension";
+            version = "0.1.1";
+            sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+        }
     ];
 }
