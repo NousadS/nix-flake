@@ -4,7 +4,7 @@
     imports = [
         ./extensions.nix
         ./keybinds.nix
-        ./settings.nix
+        ./settings
     ];
 
     programs.vscode.enable = true;
