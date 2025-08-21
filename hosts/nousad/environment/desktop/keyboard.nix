@@ -2,7 +2,7 @@
 
 {
     services.xserver.xkb = {
-        layout = "us,ru";
+        layout = "us,ru,de,gr";
         variant = "";
         options = "grp:win_space_toggle";
     };
