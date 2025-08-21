@@ -5,7 +5,7 @@
 
     stylix.cursor = {
         package = pkgs.bibata-cursors;
-        name = "Bibata Modern Classic";
+        name = "Bibata-Modern-Classic";
         size = 1;
     };
 
@@ -13,8 +13,8 @@
         enable = true;
 
         package = pkgs.papirus-nord;
-        light = "Snow Storm 1";
-        dark = "Polar Night 4";
+        light = "Snow-Storm-1";
+        dark = "Polar-Night-4";
     };
 
     stylix.opacity = {
