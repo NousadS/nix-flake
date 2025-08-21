@@ -1,7 +1,7 @@
 { config, stylix, lib, pkgs, ... }:
 
 {
-    stylix.image = ../../wallpapers/venator-left.png;
+    stylix.image = ../../../../wallpapers/venator-left.png;
 
     # BASE: ${pkgs.base16-schemes}/share/themes/eris.yaml
     stylix.polarity = "dark";
