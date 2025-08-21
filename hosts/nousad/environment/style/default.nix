@@ -2,6 +2,7 @@
 
 {
     imports = [
+        ./colors.nix
         ./fonts.nix
         ./theme.nix
     ];
