@@ -11,15 +11,13 @@
 
     stylix.icons = {
         enable = true;
-        
+
         package = pkgs.papirus-nord;
         light = "Snow Storm 1";
         dark = "Polar Night 4";
     };
 
     stylix.opacity = {
-        enable = true;
-
         applications = 1.0;
         desktop = 1.0;
         popups = 1.0;
