@@ -1,8 +1,6 @@
 { config, lib, pkgs, ... }:
 
 {
-    imports = [ ];
-    
     services.pulseaudio.enable = false;
     
     services.pipewire = {
