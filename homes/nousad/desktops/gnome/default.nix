@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
     programs.gnome-shell.extensions = with pkgs.gnomeExtensions; [
@@ -8,7 +8,7 @@
     dconf.settings = {
         "org/gnome/desktop/input-sources" = {
         show-all-sources = true;
-        sources = [ (mkTuple [ "xkb" "eu" ]) (mkTuple [ "xkb" "us+altgr-intl" ]) ];
+        sources = [ (lib.mkTuple [ "xkb" "eu" ]) (lib.mkTuple [ "xkb" "us+altgr-intl" ]) ];
         xkb-options = [ "terminate:ctrl_alt_bksp" ];
         };
     };
