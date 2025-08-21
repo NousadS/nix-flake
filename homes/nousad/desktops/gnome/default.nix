@@ -9,8 +9,10 @@
         "org/gnome/desktop/input-sources" = {
             show-all-sources = true;
             sources = [
-                [ "xkb" "eu" ]
-                [ "xkb" "us+altgr-intl" ]
+                [ "xkb" "us" ]
+                [ "xkb" "ru" ]
+                [ "xkb" "gr" ]
+                [ "xkb" "de" ]
             ];
             xkb-options = [ "terminate:ctrl_alt_bksp" ];
         };
