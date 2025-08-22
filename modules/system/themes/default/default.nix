@@ -4,6 +4,7 @@
     imports = [
         ./colors.nix
         ./fonts.nix
+        ./grub.nix
         ./theme.nix
     ];
 }
