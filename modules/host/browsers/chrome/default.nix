@@ -5,7 +5,7 @@ mkModule {
     name = "chrome";
     body = {
         environment.systemPackages = [
-            pkgs.chrome
+            pkgs.google-chrome
         ];
     };
 }

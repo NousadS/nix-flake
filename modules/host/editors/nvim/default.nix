@@ -5,7 +5,7 @@ mkModule {
     name = "nvim";
     body = {
         environment.systemPackages = [
-            pkgs.nvim
+            pkgs.neovim
         ];
     };
 }
