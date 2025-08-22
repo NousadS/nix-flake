@@ -12,13 +12,13 @@
 
     stylix.fonts = {
         serif = {
-            package = pkgs.fira-sans;
-            name = "Fira Sans Regular";
+            package = pkgs.fira-code;
+            name = "Fira Code Regular";
         };
 
         sansSerif = {
-            package = pkgs.fira-sans;
-            name = "Fira Sans Regular";
+            package = pkgs.fira-code;
+            name = "Fira Code Regular";
         };
 
         monospace = {
