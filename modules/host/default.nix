@@ -16,7 +16,7 @@ let
             )
             (
                 let 
-                    groups = builtins.readDir ./;
+                    groups = builtins.readDir "./";
                 in 
                     builtins.filter
                         (g: groups.${g} == "directory")
