@@ -13,8 +13,8 @@
         enable = true;
 
         package = pkgs.papirus-nord;
-        light = "Snow-Storm-1";
-        dark = "Polar-Night-4";
+        light = "snowstorm1";
+        dark = "polarnight3";
     };
 
     stylix.opacity = {
