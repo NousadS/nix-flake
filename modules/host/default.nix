@@ -3,7 +3,7 @@
 let
     mkModule = import ./mkModule.nix;
 
-    currentDir = ./;
+    currentDir = ./.;
     
     modules = builtins.concatLists 
         (map
