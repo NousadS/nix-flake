@@ -5,6 +5,8 @@
         user-themes
     ];
 
+    dconf.enable = true;
+
     dconf.settings = {
         # "org/gnome/desktop/input-sources" = {
         #     show-all-sources = true;
@@ -16,5 +18,15 @@
         #     ];
         #     xkb-options = [ "terminate:ctrl_alt_bksp" ];
         # };
+        "org/gnome/shell/extensions/blur-my-shell" = {
+            "blacklist"="@as []";
+            "blur-on-overview"=false;
+            "brightness"="1.0";
+            "customize"=true;
+            "enable-all"=true;
+            "opacity"="250";
+            "sigma"="59";
+            "blur"=true;
+        };
     };
 }
