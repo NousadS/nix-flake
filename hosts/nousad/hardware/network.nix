@@ -2,5 +2,6 @@
 
 {
     networking.hostName = "nousad";
+    
     networking.networkmanager.enable = true;
 }

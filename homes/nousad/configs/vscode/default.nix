@@ -8,4 +8,10 @@
     ];
 
     programs.vscode.enable = true;
+
+    programs.vscode = {
+        enableUpdateCheck = false;
+        enableExtensionUpdateCheck = false;
+        mutableExtensionsDir = false;
+    };
 }

@@ -21,8 +21,6 @@
                 inherit system;
 
                 modules = [
-                    ./modules
-
                     stylix.nixosModules.stylix
 
                     ./hosts/nousad

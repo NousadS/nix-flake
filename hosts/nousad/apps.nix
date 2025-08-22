@@ -2,7 +2,7 @@
 
 {
     imports = [
-        ../../modules
+        ../../modules/host
     ];
 
     modules.browsers.chrome.enable = true;
