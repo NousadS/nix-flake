@@ -1,6 +1,6 @@
 { config, lib, pkgs, ... }:
 
 {
-    boot.loader.grub.theme = pkgs.sleek-grub-theme;
+    boot.loader.grub.theme = lib.mkForce pkgs.sleek-grub-theme;
 }
 
