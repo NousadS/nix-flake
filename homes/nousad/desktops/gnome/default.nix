@@ -6,15 +6,15 @@
     ];
 
     dconf.settings = {
-        "org/gnome/desktop/input-sources" = {
-            show-all-sources = true;
-            sources = [
-                [ "xkb" "us" ]
-                [ "xkb" "ru" ]
-                [ "xkb" "gr" ]
-                [ "xkb" "de" ]
-            ];
-            xkb-options = [ "terminate:ctrl_alt_bksp" ];
-        };
+        # "org/gnome/desktop/input-sources" = {
+        #     show-all-sources = true;
+        #     sources = [
+        #         [ "xkb" "us" ]
+        #         [ "xkb" "ru" ]
+        #         [ "xkb" "gr" ]
+        #         [ "xkb" "de" ]
+        #     ];
+        #     xkb-options = [ "terminate:ctrl_alt_bksp" ];
+        # };
     };
 }
