@@ -5,7 +5,6 @@
         pkgs.fira-code
         pkgs.fira-mono
         pkgs.fira-sans
-        pkgs.fira-code-symbols
         pkgs.meslo-lgs-nf
         pkgs.noto-fonts-emoji
     ];
@@ -22,8 +21,8 @@
         };
 
         monospace = {
-            package = pkgs.fira-code;
-            name = "Fira Code Regular";
+            package = pkgs.meslo-lgs-nf;
+            name = "MesloLGS NF";
         };
 
         emoji = {
@@ -39,4 +38,3 @@
         };
     };
 }
-
