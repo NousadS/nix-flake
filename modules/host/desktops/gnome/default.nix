@@ -1,7 +1,8 @@
 { config, lib, pkgs, mkModule, stylix, ... }:
 
 mkModule {
-    name = "desktops.gnome";
+    group = "desktops";
+    name = "gnome";
     body = {
         environment.systemPackages = [
             pkgs.gtk3

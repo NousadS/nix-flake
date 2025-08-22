@@ -1,7 +1,8 @@
 { config, lib, pkgs, mkModule, ... }:
 
 mkModule {
-    name = "browsers.tor";
+    group = "browsers";
+    name = "tor";
     body = {
         environment.systemPackages = [
             pkgs.tor

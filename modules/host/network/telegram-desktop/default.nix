@@ -1,7 +1,8 @@
 { config, lib, pkgs, mkModule, ... }:
 
 mkModule {
-    name = "network.telegram-desktop";
+    group = "network";
+    name = "telegram-desktop";
     body = {
         environment.systemPackages = [
             pkgs.telegram-desktop

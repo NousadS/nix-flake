@@ -1,7 +1,8 @@
 { config, lib, pkgs, mkModule, ... }:
 
 mkModule {
-    name = "editors.micro";
+    group = "editors";
+    name = "micro";
     body = {
         environment.systemPackages = [
             pkgs.micro

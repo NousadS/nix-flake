@@ -1,7 +1,8 @@
 { config, lib, pkgs, mkModule, stylix, ... }:
 
 mkModule {
-    name = "fonts.default";
+    group = "fonts";
+    name = "default";
     body = {
         fonts.packages = [
             pkgs.fira-code

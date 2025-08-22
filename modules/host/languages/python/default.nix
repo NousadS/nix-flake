@@ -1,7 +1,8 @@
 { config, lib, pkgs, mkModule, ... }:
 
 mkModule {
-    name = "languages.python";
+    group = "languages";
+    name = "python";
     body = {
         environment.systemPackages = [
             pkgs.python313

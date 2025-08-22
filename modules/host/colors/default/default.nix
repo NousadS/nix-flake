@@ -1,7 +1,8 @@
 { config, lib, pkgs, mkModule, stylix, ... }:
 
 mkModule {
-    name = "colors.default";
+    group = "colors";
+    name = "default";
     body = {
         stylix.polarity = "dark";
 

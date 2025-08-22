@@ -1,7 +1,8 @@
 { config, lib, pkgs, mkModule, ... }:
 
 mkModule {
-    name = "network.zoom";
+    group = "network";
+    name = "zoom";
     body = {
         environment.systemPackages = [
             pkgs.zoom-us

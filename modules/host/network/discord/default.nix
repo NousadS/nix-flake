@@ -1,7 +1,8 @@
 { config, lib, pkgs, mkModule, ... }:
 
 mkModule {
-    name = "network.discord";
+    group = "network";
+    name = "discord";
     body = {
         environment.systemPackages = [
             pkgs.discord

@@ -1,7 +1,8 @@
 { config, lib, pkgs, mkModule, ... }:
 
 mkModule {
-    name = "fetches.pfetch";
+    group = "fetches";
+    name = "pfetch";
     body = {
         environment.systemPackages = [
             pkgs.pfetch

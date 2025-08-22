@@ -1,7 +1,8 @@
 { config, lib, pkgs, mkModule, ... }:
 
 mkModule {
-    name = "media.vlc";
+    group = "media";
+    name = "vlc";
     body = {
         environment.systemPackages = [
             pkgs.vlc

@@ -1,7 +1,8 @@
 { config, lib, pkgs, mkModule, ... }:
 
 mkModule {
-    name = "fetches.neofetch";
+    group = "fetches";
+    name = "neofetch";
     body = {
         environment.systemPackages = [
             pkgs.neofetch

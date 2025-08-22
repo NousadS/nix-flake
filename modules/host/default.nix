@@ -26,5 +26,5 @@ let
             )
         );
 in {
-    imports = map (path: import path { inherit lib pkgs mkModule stylix; }) modules;
+    imports = map (path: import path { inherit config lib pkgs mkModule stylix; }) modules;
 }

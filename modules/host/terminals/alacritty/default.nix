@@ -1,7 +1,8 @@
 { config, lib, pkgs, mkModule, ... }:
 
 mkModule {
-    name = "terminals.alacritty";
+    group = "terminals";
+    name = "alacritty";
     body = {
         environment.systemPackages = [
             pkgs.alacritty

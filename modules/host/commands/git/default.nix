@@ -1,7 +1,8 @@
 { config, lib, pkgs, mkModule, ... }:
 
 mkModule {
-    name = "commands.git";
+    group = "commands";
+    name = "git";
     body = {
         environment.systemPackages = [
             pkgs.git

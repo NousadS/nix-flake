@@ -1,7 +1,8 @@
 { config, lib, pkgs, mkModule, ... }:
 
 mkModule {
-    name = "commands.tree";
+    group = "commands";
+    name = "tree";
     body = {
         environment.systemPackages = [
             pkgs.tree

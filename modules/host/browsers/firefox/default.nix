@@ -1,7 +1,8 @@
 { config, lib, pkgs, mkModule, ... }:
 
 mkModule {
-    name = "browsers.firefox";
+    group = "browsers";
+    name = "firefox";
     body = {
         environment.systemPackages = [
             pkgs.firefox

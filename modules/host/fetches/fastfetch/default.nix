@@ -1,7 +1,8 @@
 { config, lib, pkgs, mkModule, ... }:
 
 mkModule {
-    name = "fetches.fastfetch";
+    group = "fetches";
+    name = "fastfetch";
     body = {
         environment.systemPackages = [
             pkgs.fastfetch

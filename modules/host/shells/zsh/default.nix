@@ -1,7 +1,8 @@
 { config, lib, pkgs, mkModule, ... }:
 
 mkModule {
-    name = "shells.zsh";
+    group = "shells";
+    name = "zsh";
     body = {
         environment.systemPackages = [
             pkgs.zsh

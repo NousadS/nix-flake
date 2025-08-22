@@ -1,7 +1,8 @@
 { config, lib, pkgs, mkModule, stylix, ... }:
 
 mkModule {
-    name = "themes.default";
+    group = "themes";
+    name = "default";
     body = {
         stylix.image = ../../../../wallpapers/nix-gnome.png;
 

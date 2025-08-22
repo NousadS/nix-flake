@@ -1,7 +1,8 @@
 { config, lib, pkgs, mkModule, ... }:
 
 mkModule {
-    name = "commands.eza";
+    group = "commands";
+    name = "eza";
     body = {
         environment.systemPackages = [
             pkgs.eza

@@ -1,7 +1,8 @@
 { config, lib, pkgs, mkModule, ... }:
 
 mkModule {
-    name = "editors.nvim";
+    group = "editors";
+    name = "nvim";
     body = {
         environment.systemPackages = [
             pkgs.nvim

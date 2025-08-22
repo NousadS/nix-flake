@@ -1,7 +1,8 @@
 { config, lib, pkgs, mkModule, ... }:
 
 mkModule {
-    name = "commands.gh";
+    group = "commands";
+    name = "gh";
     body = {
         environment.systemPackages = [
             pkgs.gh

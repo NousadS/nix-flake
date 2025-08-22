@@ -1,7 +1,8 @@
 { config, lib, pkgs, mkModule, ... }:
 
 mkModule {
-    name = "terminals.ghostty";
+    group = "terminals";
+    name = "ghostty";
     body = {
         environment.systemPackages = [
             pkgs.ghostty

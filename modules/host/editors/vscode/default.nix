@@ -1,7 +1,8 @@
 { config, lib, pkgs, mkModule, ... }:
 
 mkModule {
-    name = "editors.vscode";
+    group = "editors";
+    name = "vscode";
     body = {
         environment.systemPackages = [
             pkgs.vscode

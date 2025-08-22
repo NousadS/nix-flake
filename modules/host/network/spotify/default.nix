@@ -1,7 +1,8 @@
 { config, lib, pkgs, mkModule, ... }:
 
 mkModule {
-    name = "network.spotify";
+    group = "network";
+    name = "spotify";
     body = {
         environment.systemPackages = [
             pkgs.spotify

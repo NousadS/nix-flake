@@ -1,7 +1,8 @@
 { config, lib, pkgs, mkModule, ... }:
 
 mkModule {
-    name = "commands.bat";
+    group = "commands";
+    name = "bat";
     body = {
         environment.systemPackages = [
             pkgs.bat

@@ -1,7 +1,8 @@
 { config, lib, pkgs, mkModule, ... }:
 
 mkModule {
-    name = "localizations.default";
+    group = "localizations";
+    name = "default";
     body = {
         time.timeZone = "Europe/Berlin";
 

@@ -1,7 +1,8 @@
 { config, lib, pkgs, mkModule, ... }:
 
 mkModule {
-    name = "browsers.chrome";
+    group = "browsers";
+    name = "chrome";
     body = {
         environment.systemPackages = [
             pkgs.chrome
