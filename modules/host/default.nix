@@ -14,7 +14,7 @@ let
                         (d: dir.${d} == "directory")
                         (builtins.attrNames dir);
                 in
-                    map (n: "./${group}/${n}") modules
+                    map (n: "${currentDir}/${group}/${n}") modules
             )
             (
                 let 
