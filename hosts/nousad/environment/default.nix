@@ -8,5 +8,7 @@
         ./packages.nix
         ./users.nix
         ./xserver.nix
+
+        ../../../modules/system
     ];
 }
