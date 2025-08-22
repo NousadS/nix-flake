@@ -2,12 +2,14 @@
 
 let
     mkModule = import ./mkModule.nix;
+
+    currentDir = ./;
     
     modules = builtins.concatLists 
         (map
             (group:
                 let
-                    dir = builtins.readDir "./${group}";
+                    dir = builtins.readDir "${currentDir}/${group}";
                     modules = builtins.filter
                         (d: dir.${d} == "directory")
                         (builtins.attrNames dir);
@@ -16,7 +18,7 @@ let
             )
             (
                 let 
-                    groups = builtins.readDir "./";
+                    groups = builtins.readDir "${currentDir}";
                 in 
                     builtins.filter
                         (g: groups.${g} == "directory")
