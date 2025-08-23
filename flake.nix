@@ -14,7 +14,8 @@
     outputs = { self, nixpkgs, home-manager, stylix, ... } @ inputs:
     let
         system = "x86_64-linux";
-        lib = nixpkgs.lib;
+        pkgs = nixpkgs;
+        lib = pkgs.lib;
     in {
         nixosConfigurations = {
             nousad = nixpkgs.lib.nixosSystem {

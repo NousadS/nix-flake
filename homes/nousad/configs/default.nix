@@ -2,6 +2,7 @@
 
 {
     imports = [
+        ./dev
         ./ghostty
         ./vscode
         ./zsh
