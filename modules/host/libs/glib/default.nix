@@ -17,13 +17,7 @@ mkModule {
         };
 
         environment.variables = {
-            LD_LIBRARY_PATH = lib.mkForce (lib.concatStringsSep ":" [
-                "$LD_LIBRARY_PATH"
-                "${pkgs.zlib}/lib"
-                "${pkgs.SDL2}/lib"
-                "${pkgs.SDL2_ttf}/lib"
-                "${pkgs.SDL2_mixer}/lib"
-            ]);
+            LD_LIBRARY_PATH = lib.mkForce "$LD_LIBRARY_PATH:$NIX_LD_LIBRARY_PATH";
         };
     };
 }
