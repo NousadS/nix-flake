@@ -12,9 +12,9 @@
     stylix.icons = {
         enable = true;
 
-        package = pkgs.papirus-icon-theme;
-        # light = "snowstorm1";
-        # dark = "polarnight1";
+        package = pkgs.papirus-nord;
+        light = "snowstorm1";
+        dark = "polarnight1";
     };
 
     stylix.opacity = {
