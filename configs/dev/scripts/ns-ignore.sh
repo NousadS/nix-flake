@@ -18,4 +18,4 @@ echo "# Automatically added by ns-license.sh" >> "$TARGET_FILE"
 echo "flake.nix" >> "$TARGET_FILE"
 echo "flake.lock" >> "$TARGET_FILE"
 
-echo "Copied $2 gitignore"
+echo "Copied $LICENSE_URL_NAME gitignore"
