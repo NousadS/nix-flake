@@ -4,6 +4,6 @@
     nixpkgs.config.allowUnfree = true;
 
     environment.systemPackages = [
-        ntfs3g
+        pkgs.ntfs3g
     ];
 }
