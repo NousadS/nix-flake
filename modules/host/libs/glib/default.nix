@@ -10,5 +10,13 @@ mkModule {
                 pkgs.glib
             ];
         };
+
+        environment.variables = {
+            LD_LIBRARY_PATH = lib.mkForce ''
+                $LD_LIBRARY_PATH
+                ${pkgs.glib}/lib
+                ${pkgs.glibc}/lib
+            '';
+        };
     };
 }
