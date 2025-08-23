@@ -17,7 +17,7 @@ mkModule {
         };
 
         environment.variables = {
-            LD_LIBRARY_PATH = lib.mkForce (concatStringsSep ":" [
+            LD_LIBRARY_PATH = lib.mkForce (lib.concatStringsSep ":" [
                 "$LD_LIBRARY_PATH"
                 "${pkgs.zlib}/lib"
                 "${pkgs.SDL2}/lib"
