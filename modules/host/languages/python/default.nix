@@ -6,6 +6,9 @@ mkModule {
     body = {
         environment.systemPackages = [
             pkgs.python313
+
+            pkgs.python312Packages.virtualenv
+
             pkgs.pdm
         ];
     };
