@@ -3,5 +3,7 @@
 {
     nixpkgs.config.allowUnfree = true;
 
-    environment.systemPackages = [ ];
+    environment.systemPackages = [
+        ntfs3g
+    ];
 }
