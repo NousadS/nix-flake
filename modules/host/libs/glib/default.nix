@@ -8,6 +8,11 @@ mkModule {
             enable = true;
             libraries = (config.programs.nix-ld.libraries or []) ++ [
                 pkgs.glib
+                pkgs.glibc
+                pkgs.zlib
+                pkgs.SDL2
+                pkgs.SDL2_ttf
+                pkgs.SDL2_mixer
             ];
         };
 
