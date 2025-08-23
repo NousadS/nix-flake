@@ -17,11 +17,13 @@ mkModule {
         };
 
         environment.variables = {
-            LD_LIBRARY_PATH = lib.mkForce ''
-                $LD_LIBRARY_PATH
-                ${pkgs.glib}/lib
-                ${pkgs.glibc}/lib
-            '';
+            LD_LIBRARY_PATH = lib.mkForce (concatStringsSep ":" [
+                "$LD_LIBRARY_PATH"
+                "${pkgs.zlib}/lib"
+                "${pkgs.SDL2}/lib"
+                "${pkgs.SDL2_ttf}/lib"
+                "${pkgs.SDL2_mixer}/lib"
+            ]);
         };
     };
 }
