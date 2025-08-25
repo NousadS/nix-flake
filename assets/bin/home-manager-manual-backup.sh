@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-mkdir -p ~/.hm-backups
+backup_dir="$HOME/.hm-backups/$(date +%Y%m%d-%H%M%S)"
 
-mv ~/.config ~/.hm-backups/
-mv ~/.vscode ~/.hm-backups/
+mkdir -p "$backup_dir"
+
+mv "$HOME/.config" "$backup_dir/"
+mv "$HOME/.vscode" "$backup_dir/"
