@@ -26,16 +26,7 @@
 
                     ./hosts/nousad
                     
-                    home-manager.nixosModules.home-manager {
-                        home-manager.useGlobalPkgs = true;
-                        home-manager.useUserPackages = true;
-
-                        home-manager.backupFileExtension = "backup";
-
-                        home-manager.extraSpecialArgs = { inherit stylix; };
-
-                        home-manager.users.nousad = import ./homes/nousad;
-                    }
+                    home-manager.nixosModules.home-manager
                 ];
             };
         };
