@@ -1,11 +1,8 @@
-{ config, pkgs, ... }:
+{ config, pkgs, users, ... }:
 
 {
     imports = [
-        ./configs
-        ./desktops
-        
-        ./environment.nix
-        ./user.nix
+        ./configuration.nix
+        ./modules.nix
     ];
 }

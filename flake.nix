@@ -22,10 +22,9 @@
                 inherit system;
 
                 modules = [
-                    stylix.nixosModules.stylix
-
                     ./hosts/nousad
-                    
+
+                    stylix.nixosModules.stylix
                     home-manager.nixosModules.home-manager
                 ];
             };

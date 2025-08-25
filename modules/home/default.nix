@@ -1,7 +1,7 @@
 { config, lib, pkgs, stylix, ... }:
 
 let
-    mkHostModule = import ./mkHostModule.nix;
+    mkHomeModule = import ./mkHomeModule.nix;
 
     currentDir = ./.;
     
@@ -28,6 +28,6 @@ let
 in {
     imports = map (path: import path {
         inherit config lib pkgs stylix;
-        mkModule = mkHostModule;
+        mkModule = mkHomeModule;
     }) modules;
 }

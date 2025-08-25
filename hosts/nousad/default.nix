@@ -2,9 +2,11 @@
 
 {
     imports = [
-        ./hardware
-        ./environment
-
-        ./apps.nix
+        ./hardware.nix
+        ./configuration.nix
+        ./disks.nix
+        ./nix.nix
+        ./home.nix
+        ./modules.nix
     ];
 }
