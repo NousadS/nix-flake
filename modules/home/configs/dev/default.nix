@@ -5,7 +5,7 @@ mkModule {
     name = "dev";
     body = {
         home.file = {
-            ".nousad".source = ./../../../../../assets/configs/dev;
+            ".nousad".source = ./files;
         }; 
 
         home.sessionVariables = {

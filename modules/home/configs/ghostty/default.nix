@@ -3,9 +3,10 @@
 mkModule {
     group = "configs";
     name = "ghostty";
-    body = {
+
+    body = {        
         home.file = {
-            ".config/ghostty/config".source = ./../../../../../assets/configs/ghostty/config;
+            ".config/ghostty/config".source = ./files/config;
         }; 
         
         # stylix.targets = {
