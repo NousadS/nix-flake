@@ -7,6 +7,6 @@
         extraGroups = [ "networkmanager" "wheel" ];
         packages = [ ];
     };
-    
-    home-manager.users.nousad = import ../../homes/nousad;
+
+    home-manager.users.nousad = import ../../../homes/nousad;
 }
