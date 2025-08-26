@@ -1,11 +1,11 @@
-{ config, lib, pkgs, mkModule, ... }:
+{ config, lib, pkgs, mkModule, self, ... }:
 
 mkModule {
     group = "configs";
     name = "dev";
     body = {
         home.file = {
-            ".nousad".source = ./files;
+            ".nousad".source = self + "/assets/configs/dev";
         }; 
 
         home.sessionVariables = {

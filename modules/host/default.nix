@@ -1,4 +1,4 @@
-{ config, lib, pkgs, stylix, ... }:
+{ config, lib, pkgs, ... } @ args:
 
 let
     mkHostModule = import ./mkHostModule.nix;
@@ -26,8 +26,7 @@ let
             )
         );
 in {
-    imports = map (path: import path {
-        inherit config lib pkgs stylix;
+    imports = map (path: import path (args // {
         mkModule = mkHostModule;
-    }) modules;
+    })) modules;
 }

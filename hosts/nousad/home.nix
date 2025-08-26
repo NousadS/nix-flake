@@ -1,4 +1,4 @@
-{ config, pkgs, stylix, ... }:
+{ config, pkgs, stylix, inputs, ... }:
 
 {
     home-manager.useGlobalPkgs = true;
@@ -6,5 +6,5 @@
 
     home-manager.backupFileExtension = "backup";
 
-    home-manager.extraSpecialArgs = { inherit stylix; };
+    home-manager.extraSpecialArgs = { inherit stylix; self = inputs.self; };
 }

@@ -1,4 +1,4 @@
-{ config, lib, pkgs, mkModule, ... }:
+{ config, lib, pkgs, mkModule, self, ... }:
 
 mkModule {
     group = "configs";
@@ -6,7 +6,7 @@ mkModule {
 
     body = {        
         home.file = {
-            ".config/ghostty/config".source = ./files/config;
+            ".config/ghostty/config".source = self + "/assets/configs/ghostty/config";
         }; 
         
         # stylix.targets = {
