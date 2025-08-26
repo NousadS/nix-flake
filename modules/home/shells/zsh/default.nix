@@ -8,6 +8,7 @@ mkModule {
         ./aliases.nix
         ./p10k.nix
         ./path.nix
+        ./rc.nix
     ];
 
     body = { };
