@@ -4,13 +4,6 @@ mkModule {
     group = "shells";
     name = "zsh";
 
-    imports = [
-        ./aliases.nix
-        ./p10k.nix
-        ./path.nix
-        ./rc.nix
-    ];
-
     body = {
         programs.zsh.enable = true;
 
