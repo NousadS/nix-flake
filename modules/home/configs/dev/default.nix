@@ -8,8 +8,8 @@ mkModule {
             ".nousad".source = self + "/assets/configs/dev";
         }; 
 
-        home.sessionVariables = {
-            PATH = "${config.home.homeDirectory}/.nousad/scripts/:$PATH";
-        };
+        home.sessionPath = [
+            "$HOME/.nousad/scripts/"
+        ];
     };
 }
