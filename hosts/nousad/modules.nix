@@ -34,6 +34,7 @@
         browsers.tor.enable = true;
 
         commands.bat.enable = true;
+        commands.devenv.enable = true;
         commands.eza.enable = true;
         commands.gh.enable = true;
         commands.git.enable = true;
