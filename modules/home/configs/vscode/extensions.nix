@@ -20,6 +20,7 @@
         foxundermoon.shell-format
         ms-python.python
         charliermarsh.ruff
+        ms-python.vscode-pylance
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
             publisher = "roonie007";
