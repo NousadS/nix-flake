@@ -21,6 +21,7 @@
         ms-python.python
         charliermarsh.ruff
         ms-python.vscode-pylance
+        arrterian.nix-env-selector
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
             publisher = "roonie007";
