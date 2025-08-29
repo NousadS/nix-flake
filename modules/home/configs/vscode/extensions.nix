@@ -18,6 +18,8 @@
         streetsidesoftware.code-spell-checker
         bbenoist.nix
         foxundermoon.shell-format
+        ms-python.python
+        charliermarsh.ruff
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
             publisher = "roonie007";
