@@ -1,0 +1,189 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "type": "auto",
+        "source": "nix",
+        "width": 65,
+        "height": 35,
+        "padding": {
+            "top": 0,
+            "left": 2,
+            "right": 2
+        },
+        "color": {
+            "1": "bright_blue",
+            "2": "bright_magenta",
+            "3": "bright_cyan"
+        }
+    },
+    "display": {
+        "separator": ": ",
+        "color": {
+            "keys": "bright_cyan",
+            "title": "bright_magenta",
+            "values": "white"
+        },
+        "key": {
+            "width": 12,
+            "type": "string"
+        },
+        "bar": {
+            "width": 12,
+            "char": {
+                "elapsed": "■",
+                "total": "─"
+            },
+            "color": {
+                "elapsed": "bright_green",
+                "total": "dark_gray"
+            }
+        },
+        "percent": {
+            "type": 9,
+            "color": {
+                "green": "bright_green",
+                "yellow": "bright_yellow",
+                "red": "bright_red"
+            }
+        }
+    },
+    "modules": [
+        {
+            "type": "title",
+            "key": " ",
+            "format": "{user-name-colored}{at-symbol-colored}{host-name-colored}"
+        },
+
+        {
+            "type": "os",
+            "key": " ",
+            "format": "    {#dim_white}on{#} {#bright_white}{name} {version}{#} {#dim_white}on{#} {#white}{arch}{#}"
+        },
+        {
+            "type": "packages",
+            "key": " ",
+            "format": "    {#dim_white}with{#} {#bright_white}{all}{#} {#white}packages{#}"
+        },
+        {
+            "type": "initsystem",
+            "key": " ",
+            "format": "    {#dim_white}booted on{#} {#bright_white}{name}{#} {#dim_white}({version}){#}"
+        },
+        {
+            "key": " ",
+            "type": "uptime",
+            "format": "    {#dim_white}uptime{#} {#bright_white}{days}d {hours}h {minutes}m {seconds}s{#}"
+        },
+        {
+            "type": "weather",
+            "key": " ",
+            "format": "    {#dim_white}with{#} {#bright_white}{result}{#} {#dim_white}outside{#}"
+        },
+
+        "break",
+
+        {
+            "type": "cpu",
+            "key": " ",
+            "format": "    {#dim_white}on{#} {#bright_white}{name}{#} {#dim_white}with{#} {#bright_white}{cores-online}{#} {#dim_white}cores at{#} {#bright_white}{freq-max}{#} {#dim_white}CPU{#}"
+        },
+        {
+            "type": "gpu",
+            "key": " ",
+            "format": "    {#dim_white}on{#} {#bright_white}{vendor} {name}{#} {#dim_white}GPU{#}"
+        },
+
+        "break",
+
+        {
+            "type": "memory",
+            "key": " ",
+            "format": "    {#dim_white}with{#} {#bright_white}{total}{#} {#dim_white}RAM{#}"
+        },
+        {
+            "type": "physicaldisk",
+            "key": " ",
+            "format": "    {#dim_white}with{#} {#bright_white}{physical-type}{#} {#dim_white}with{#} {#bright_white}{size}{#} {#dim_white}at{#} {#bright_white}{dev-path}{#}"
+        },
+
+        "break",
+
+        {
+            "type": "de",
+            "key": " ",
+            "format": "    {#dim_white}on{#} {#bright_white}{pretty-name}{#} {#dim_white}{version}{#}"
+        },
+        {
+            "type": "lm",
+            "key": " ",
+            "format": "    {#dim_white}with{#} {#bright_white}{service} {type}{#} {#dim_white}{version}{#}"
+        },
+        {
+            "type": "wm",
+            "key": " ",
+            "format": "    {#dim_white}with{#} {#bright_white}{pretty-name}{#} {#dim_white}{version}{#}"
+        },
+
+
+        "break",
+
+        {
+            "type": "wmtheme",
+            "key": " ",
+            "format": "    {#dim_white}themed by{#} {#bright_white}{result}{#}"
+        },
+        {
+            "type": "theme",
+            "key": " ",
+            "format": "    {#dim_white}with fallback on{#} {#bright_white}{theme2}{#}"
+        },
+        {
+            "type": "font",
+            "key": " ",
+            "format": "    {#dim_white}writing by{#} {#bright_white}{font2}{#}"
+        },
+        {
+            "type": "command",
+            "key": " ",
+            "text": "gsettings get org.gnome.desktop.interface icon-theme | tr -d \"'\" | tr '-' ' '",
+            "format": "    {#dim_white}icons by{#} {#bright_white}{result}{#}"
+        },
+        {
+            "type": "command",
+            "key": " ",
+            "text": "gsettings get org.gnome.desktop.interface cursor-theme | tr -d \"'\" | tr '-' ' '",
+            "format": "    {#dim_white}hovered by{#} {#bright_white}{result}{#}"
+        },
+        {
+            "type": "command",
+            "key": " ",
+            "text": "gsettings get org.gnome.desktop.background picture-uri | sed \"s|file://||; s/'//g\" | xargs basename -s .jpg",
+            "format": "    {#dim_white}with{#} {#bright_white}{result}{#} {#dim_white}on the wall{#}"
+        },
+
+        "break",
+
+        {
+            "type": "editor",
+            "key": " ",
+            "format": "    {#dim_white}coding in{#} {#bright_white}{type} {name}{#} {#dim_white}{version}{#}"
+        },
+        {
+            "type": "terminal",
+            "key": " ",
+            "format": "    {#dim_white}executing in{#} {#bright_white}{pretty-name}{#} {#dim_white}{version}{#}"
+        },
+        {
+            "type": "shell",
+            "key": " ",
+            "format": "    {#dim_white}through{#} {#bright_white}{pretty-name}{#} {#dim_white}{version}{#}"
+        },
+
+        "break",
+        
+        {
+            "type": "colors",
+            "key": " "
+        }
+    ]
+}
