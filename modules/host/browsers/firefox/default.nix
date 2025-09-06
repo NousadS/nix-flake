@@ -4,9 +4,7 @@ mkModule {
     group = "browsers";
     name = "firefox";
     body = {
-        environment.systemPackages = [
-            pkgs.firefox
-        ];
+        programs.firefox.enable = true;
     };
 }
 

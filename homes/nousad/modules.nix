@@ -8,12 +8,17 @@
     ];
 
     modules.home = {
-        configs.dev.enable = true;
-        configs.ghostty.enable = true;
-        configs.vscode.enable = true;
+        editors.neovim.enable = true;
+        editors.vscode.enable = true;
 
-        desktops.gnome.enable = true;
+        nousad.scripts.enable = true;
+
+        services.solaar.enable = true;
         
+        desktops.gnome.enable = true;
+
         shells.zsh.enable = true;
+
+        terminals.ghostty.enable = true;
     };
 }

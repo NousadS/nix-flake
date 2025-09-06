@@ -22,6 +22,7 @@
         ./languages/js-ts.nix
         ./languages/json.nix
         ./languages/markdown.nix
+        ./languages/nix.nix
         ./languages/python.nix
         ./languages/svg.nix
         ./languages/vue.nix

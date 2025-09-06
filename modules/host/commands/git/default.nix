@@ -4,9 +4,7 @@ mkModule {
     group = "commands";
     name = "git";
     body = {
-        environment.systemPackages = [
-            pkgs.git
-        ];
+        programs.git.enable = true;
     };
 }
 

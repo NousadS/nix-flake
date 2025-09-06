@@ -1,12 +1,11 @@
-
-{ group, name, body, options ? {}, imports ? [] }:
+{ group, name, body, extraOptions ? {}, imports ? [] }:
 
 { config, lib, pkgs, ... }:
 
 let
     cfg = config.modules.host.${group}.${name}; 
 in {
-    options = {
+    options = extraOptions // {
         modules.host.${group}.${name}.enable = lib.mkEnableOption("enables ${name}");
     };
 

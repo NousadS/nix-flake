@@ -1,11 +1,11 @@
 { config, lib, pkgs, mkModule, ... }:
 
 mkModule {
-    group = "configs";
+    group = "editors";
     name = "vscode";
     
     imports = [
-        ./extensions.nix
+        ./extensions.nix # Breaks pylance
         ./keybinds.nix
         ./settings
     ];
@@ -16,7 +16,7 @@ mkModule {
         programs.vscode = {
             enableUpdateCheck = false;
             enableExtensionUpdateCheck = false;
-            mutableExtensionsDir = false;
+            mutableExtensionsDir = true;
         };
     };
 }

@@ -21,8 +21,6 @@
         ../../modules/core-host/services/stylix
         ../../modules/core-host/services/xserver
 
-        ../../modules/core-host/themes/default
-
         ../../modules/core-host/users/nousad
 
         ../../modules/host
@@ -33,15 +31,16 @@
         browsers.firefox.enable = false;
         browsers.tor.enable = true;
 
+        commands.alejandra.enable = false;
         commands.bat.enable = true;
         commands.devenv.enable = true;
         commands.eza.enable = true;
         commands.gh.enable = true;
         commands.git.enable = true;
-        commands.tree.enable = true;
+        commands.tree.enable = false;
 
         editors.micro.enable = true;
-        editors.nvim.enable = true;
+        editors.neovim.enable = true;
         editors.vscode.enable = true;
 
         fetches.fastfetch.enable = true;
@@ -54,16 +53,23 @@
         languages.python.enable = true;
 
         media.gimp.enable = true;
+        media.pinta.enable = true;
         media.vlc.enable = true;
 
         network.discord.enable = true;
-        network.spotify.enable = true;
+        network.spotify.enable = false;
         network.telegram-desktop.enable = true;
         network.zoom.enable = true;
+
+        services.solaar.enable = true;
 
         shells.zsh.enable = true;
 
         terminals.alacritty.enable = false;
         terminals.ghostty.enable = true;
+
+        themes.default.enable = true;
+        # themes.default.theme = "gruvbox-dark-pale";
+        # themes.default.wallpaper = "ThonkPad.jpg";
     };
 }

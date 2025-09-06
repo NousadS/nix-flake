@@ -1,12 +1,13 @@
 { config, lib, pkgs, mkModule, ... }:
 
 mkModule {
-    group = "editors";
-    name = "nvim";
+    group = "media";
+    name = "pinta";
     body = {
         environment.systemPackages = [
-            pkgs.neovim
+            pkgs.pinta
         ];
     };
 }
+
 

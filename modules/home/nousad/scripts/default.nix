@@ -1,8 +1,8 @@
 { config, lib, pkgs, mkModule, self, ... }:
 
 mkModule {
-    group = "configs";
-    name = "dev";
+    group = "nousad";
+    name = "scripts";
     body = {
         home.file = {
             ".nousad".source = self + "/assets/configs/dev";

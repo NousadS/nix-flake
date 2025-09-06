@@ -4,9 +4,7 @@ mkModule {
     group = "commands";
     name = "bat";
     body = {
-        environment.systemPackages = [
-            pkgs.bat
-        ];
+        programs.bat.enable = true;
     };
 }
 

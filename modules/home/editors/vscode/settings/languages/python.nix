@@ -6,19 +6,18 @@
             analysis = {
                 autoFormatStrings = true;
                 autoImportCompletions = true;
-
-                diagnosticSeverityOverrides = {
-                    reportUndefinedVariable = "none";
-                };
+                typeCheckingMode = "basic";
+                autoSearchPaths = true;
             };
 
             languageServer = "Pylance";
-            python.defaultInterpreterPath = "/usr/bin/python";
+            defaultInterpreterPath = "/usr/bin/python";
         };
 
         "[python]" = {
             editor.formatOnSave = true;
             editor.defaultFormatter = "charliermarsh.ruff";
+            editor.semanticHighlighting.enabled = true;
         };
 
         ruff = {

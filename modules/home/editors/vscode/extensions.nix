@@ -7,7 +7,6 @@
         aaron-bond.better-comments
         christian-kohler.path-intellisense
         funkyremi.vscode-google-translate
-        ms-vscode.hexeditor
         adpyke.codesnap
         esbenp.prettier-vscode
         wmaurer.change-case
@@ -18,10 +17,10 @@
         streetsidesoftware.code-spell-checker
         bbenoist.nix
         foxundermoon.shell-format
-        ms-python.python
         charliermarsh.ruff
-        ms-python.vscode-pylance
         arrterian.nix-env-selector
+        # vscodevim.vim
+        kamadorueda.alejandra
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
             publisher = "roonie007";
@@ -76,6 +75,25 @@
             name = "code-spell-checker-ancient-greek";
             version = "1.0.5";
             sha256 = "sha256-nDNRtVJefBFwxvPC3U1p9m93stoy8TfcdFNXl5+aUXA=";
+        }
+        
+        {
+            publisher = "ms-vscode";
+            name = "hexeditor";
+            version = "1.11.1";
+            sha256 = "sha256-RB5YOp30tfMEzGyXpOwPIHzXqZlRGc+pXiJ3foego7Y=";
+        }
+        {
+            publisher = "ms-python";
+            name = "python";
+            version = "2025.13.2025090201";
+            sha256 = "sha256-Sq/XYi72oDjcGenoswtLuwzsIDwauxueo8HhuPvwWVU==";
+        }
+        {
+            publisher = "ms-python";
+            name = "vscode-pylance";
+            version = "2025.7.102";
+            sha256 = "sha256-Gd8p/XfRpURdwUHfnqlzWsimZfr7ClWDhg1Hqwlrlas=";
         }
     ];
 }

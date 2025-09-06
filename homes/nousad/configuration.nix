@@ -6,6 +6,8 @@
     home.homeDirectory = "/home/nousad";
 
     home.sessionVariables = {
-        
+        EDITOR = "micro";
+        VISUAL = "code";
+        TERMINAL = "ghostty";
     };
 }
