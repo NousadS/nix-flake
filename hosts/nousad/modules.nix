@@ -37,6 +37,7 @@
         commands.eza.enable = true;
         commands.gh.enable = true;
         commands.git.enable = true;
+        commands.ngrok.enable = true;
         commands.tree.enable = false;
 
         editors.micro.enable = true;
