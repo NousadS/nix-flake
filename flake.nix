@@ -9,9 +9,18 @@
 
         stylix.url = "github:nix-community/stylix/release-25.05";
         stylix.inputs.nixpkgs.follows = "nixpkgs";
+
+        nix4nvchad.url = "github:nix-community/nix4nvchad";
+        nix4nvchad.inputs.nixpkgs.follows = "nixpkgs";
+
+        solaar.url = "https://flakehub.com/f/Svenum/Solaar-Flake/0.1.2";
+        solaar.inputs.nixpkgs.follows = "nixpkgs";
+
+        alejandra.url = "github:kamadorueda/alejandra/4.0.0";
+        alejandra.inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    outputs = { self, nixpkgs, home-manager, stylix, ... } @ inputs:
+    outputs = { self, nixpkgs, ... } @ inputs:
     let
         system = "x86_64-linux";
 
@@ -22,13 +31,14 @@
             nousad = nixpkgs.lib.nixosSystem {
                 inherit system;
 
-                specialArgs = { inherit inputs; };
+                specialArgs = { inherit self inputs system; };
 
                 modules = [
                     ./hosts/nousad
 
-                    stylix.nixosModules.stylix
-                    home-manager.nixosModules.home-manager
+                    inputs.home-manager.nixosModules.home-manager
+                    inputs.stylix.nixosModules.stylix
+                    inputs.solaar.nixosModules.default
                 ];
             };
         };
