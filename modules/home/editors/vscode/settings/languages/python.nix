@@ -6,7 +6,7 @@
             analysis = {
                 autoFormatStrings = true;
                 autoImportCompletions = true;
-                typeCheckingMode = "basic";
+                typeCheckingMode = "strict";
                 autoSearchPaths = true;
             };
 
