@@ -7,3 +7,7 @@ result-*
 
 # Dev stuff
 s.nix
+
+# Github size restrictions
+
+assets/wallpapers/wallpapers-not-active-use.zip
