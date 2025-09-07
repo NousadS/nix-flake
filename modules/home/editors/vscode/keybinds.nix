@@ -12,6 +12,16 @@
             command = "workbench.action.addComment";
             when = "activeCursorHasCommentingRange";
         }
+        {
+            key = "ctrl+shift+o";
+            command = "editor.action.organizeImports";
+            when = "textInputFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/";
+        }
+        {
+            key = "shift+alt+o";
+            command = "-editor.action.organizeImports";
+            when = "textInputFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/";
+        }
         # {
         #     key = "ctrl+` ctrl+f";
         #     command = "workbench.action.toggleMaximizedPanel";
