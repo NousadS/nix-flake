@@ -76,6 +76,12 @@
             version = "1.0.5";
             sha256 = "sha256-nDNRtVJefBFwxvPC3U1p9m93stoy8TfcdFNXl5+aUXA=";
         }
+        {
+            publisher = "brunnerh";
+            name = "file-properties-viewer";
+            version = "1.2.0";
+            sha256 = "sha256-SeaQCxQoSqx5hgI26EM6qYdltxJfU6eaizZPbpS7t00=";
+        }
         
         {
             publisher = "ms-vscode";
