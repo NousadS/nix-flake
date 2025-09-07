@@ -4,7 +4,13 @@
     users.users.nousad = {
         isNormalUser = true;
         description = "nousad";
-        extraGroups = [ "networkmanager" "wheel" "input" ];
+        extraGroups = [
+            "networkmanager"
+            "wheel"
+            "input"
+            "scanner"
+            "lp" 
+        ];
         packages = [ ];
     };
 
