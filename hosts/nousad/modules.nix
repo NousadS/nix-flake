@@ -40,6 +40,7 @@
         commands.ngrok.enable = true;
         commands.tree.enable = false;
 
+        editors.ghidra.enable = true;
         editors.micro.enable = true;
         editors.neovim.enable = true;
         editors.vscode.enable = true;
