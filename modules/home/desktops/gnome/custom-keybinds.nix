@@ -17,5 +17,10 @@
             command = "google-chrome-stable";
             binding = "<Shift><Control><Super>b";
         };
+        "org/gnome/settings-daemon/plugins/media-keys/custom-keybinds/custom3" = {
+            name = "Solaar - Game";
+            command = "prismlauncher";
+            binding = "<Shift><Control><Super>g";
+        };
     };
 }

@@ -17,10 +17,13 @@
   - [Shift_L, Control_L, Super_L, B]
   - click 
 ...
-# ---
-# - Key: [Emoji Smilie With Tears, released]
-# - Execute: echo $PATH
-# ...
+---
+- Key: [Emoji Smilie With Tears, released]
+- KeyPress:
+  - [Shift_L, Control_L, Super_L, G]
+  - click
+...
+...
 # ---
 # - Key: [Open Emoji Panel, released]
 # - Execute: code
