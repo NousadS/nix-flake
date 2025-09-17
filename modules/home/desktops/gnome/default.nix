@@ -20,6 +20,7 @@ mkModule {
             vitals
             gsconnect
             pip-on-top
+            color-picker
         ];
 
         dconf.enable = true;
