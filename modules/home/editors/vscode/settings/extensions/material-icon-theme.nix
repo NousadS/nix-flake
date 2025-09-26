@@ -22,6 +22,13 @@
                         "folderNames" = [ "lexer" ];
                     }
                     {
+                        "name" = "blueprints";
+                        "base" = "routes";
+                        "color" = "blue-500";
+                        "lightColor" = "blue-700";
+                        "folderNames" = [ "blueprint", "blueprints" ];
+                    }
+                    {
                         "name" = "grouper";
                         "base" = "element";
                         "color" = "red-500";
