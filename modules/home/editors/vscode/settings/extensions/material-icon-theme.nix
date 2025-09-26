@@ -26,7 +26,7 @@
                         "base" = "routes";
                         "color" = "blue-500";
                         "lightColor" = "blue-700";
-                        "folderNames" = [ "blueprint", "blueprints" ];
+                        "folderNames" = [ "blueprint" "blueprints" ];
                     }
                     {
                         "name" = "grouper";
