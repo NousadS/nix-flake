@@ -5,7 +5,7 @@ mkModule {
     name = "kdenlive";
     body = {
         environment.systemPackages = [
-            pkgs.kdenlive
+            pkgs.kdePackages.kdenlive
         ];
     };
 }
