@@ -56,6 +56,7 @@
 
         media.gimp.enable = true;
         media.kdenlive.enable = true;
+        media.openshot.enable = true;
         media.pinta.enable = true;
         media.vlc.enable = true;
 
