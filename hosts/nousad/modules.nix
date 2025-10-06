@@ -53,6 +53,7 @@
         games.prism-launcher.enable = true;
 
         languages.python.enable = true;
+        languages.node.enable = true;
 
         media.gimp.enable = true;
         media.kdenlive.enable = true;
