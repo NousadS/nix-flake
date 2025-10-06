@@ -8,6 +8,7 @@
         
         "[typescript]" = {
             editor.tabSize = 4;
+            editor.defaultFormatter = "esbenp.prettier-vscode";
         };
 
         "[typescriptreact]" = {
