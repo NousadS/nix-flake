@@ -24,6 +24,7 @@
         ./languages/markdown.nix
         ./languages/nix.nix
         ./languages/python.nix
+        ./languages/svelte.nix
         ./languages/svg.nix
         ./languages/vue.nix
     ];

@@ -21,6 +21,7 @@
         arrterian.nix-env-selector
         # vscodevim.vim
         kamadorueda.alejandra
+        svelte.svelte-vscode
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
             publisher = "roonie007";
@@ -100,6 +101,12 @@
             name = "vscode-pylance";
             version = "2025.7.102";
             sha256 = "sha256-Gd8p/XfRpURdwUHfnqlzWsimZfr7ClWDhg1Hqwlrlas=";
+        }
+        {
+            publisher = "ardenivanov";
+            name = "svelte-intellisense";
+            version = "0.7.1";
+            sha256 = "sha256-/AiGMgwCeD9B3y8LxTe6HoIswLuCnLbmwV7fxwfWSLw=";
         }
     ];
 }
