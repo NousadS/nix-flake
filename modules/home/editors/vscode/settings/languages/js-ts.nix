@@ -8,11 +8,11 @@
         
         "[typescript]" = {
             editor.tabSize = 4;
-            editor.defaultFormatter = "vscode.typescript-language-features";
+            editor.defaultFormatter = "esbenp.prettier-vscode";
         };
 
         "[typescriptreact]" = {
-            editor.defaultFormatter = "vscode.typescript-language-features";
+            editor.defaultFormatter = "esbenp.prettier-vscode";
         };
     };
 }
