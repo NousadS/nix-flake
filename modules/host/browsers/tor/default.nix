@@ -6,6 +6,7 @@ mkModule {
     body = {
         environment.systemPackages = [
             pkgs.tor
+            pkgs.tor-browser
         ];
     };
 }
