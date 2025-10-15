@@ -55,6 +55,8 @@
         languages.python.enable = true;
         languages.node.enable = true;
 
+        layers.bottles.enable = true;
+
         media.gimp.enable = true;
         media.kdenlive.enable = true;
         media.openshot.enable = true;
