@@ -10,6 +10,7 @@ mkModule {
             ]))
 
             pkgs.pdm
+            pkgs.ruff
         ];
     };
 }
