@@ -5,6 +5,7 @@ mkModule {
     name = "c-cpp";
     body = {
         environment.systemPackages = [
+            pkgs.gcc
             pkgs.libgcc
             pkgs.glibc
             pkgs.gdb
