@@ -52,8 +52,9 @@
 
         games.prism-launcher.enable = true;
 
-        languages.python.enable = true;
+        languages.c-cpp.enable = true;
         languages.node.enable = true;
+        languages.python.enable = true;
 
         layers.bottles.enable = true;
 
