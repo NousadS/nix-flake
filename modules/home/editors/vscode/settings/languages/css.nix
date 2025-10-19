@@ -6,7 +6,7 @@
             editor.defaultFormatter = "vscode.css-language-features";
         };
 
-        "[scss]": {
+        "[scss]" = {
             editor.defaultFormatter = "esbenp.prettier-vscode";
         }
     };
