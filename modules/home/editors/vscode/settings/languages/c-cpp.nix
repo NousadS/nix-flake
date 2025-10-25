@@ -1,14 +1,15 @@
+{ config, lib, pkgs, ... }:
+
 {
-    vscprofile,
-    config,
-    lib,
-    pkgs,
-    ...
-}: {
-    programs.vscode.profiles = {
-        ${vscprofile} = {
-            extensions = with pkgs.vscode-extensions; [
+    extensions = with pkgs.vscode-extensions; [
+        ms-vscode.cpptools
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+        {
+            publisher = "jeff-hykin";
+            name = "better-cpp-syntax";
+            version = "1.27.1";
+            sha256 = "xxxx";
+        }
     ];
     
     userSettings = {
@@ -36,5 +37,5 @@
                 "/include"
             ];
         };
-    };};
+    };
 }

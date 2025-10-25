@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Google Формы
+Exec=google-chrome-stable --profile-directory=Default --app-id=jkdlbdnmmndeckliookkkcbgindcjpme
+Icon=chrome-jkdlbdnmmndeckliookkkcbgindcjpme-Default
+StartupWMClass=crx_jkdlbdnmmndeckliookkkcbgindcjpme

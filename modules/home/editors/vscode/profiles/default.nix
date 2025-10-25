@@ -27,6 +27,8 @@ let
     ../settings/extensions/rename-replace.nix
     ../settings/extensions/vscord.nix
 
+    ../settings/languages/binary.nix
+    ../settings/languages/c-cpp.nix
     ../settings/languages/nix.nix
     ../settings/languages/python.nix
   ];
