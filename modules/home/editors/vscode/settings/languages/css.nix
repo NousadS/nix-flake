@@ -8,7 +8,7 @@
             publisher = "esdete";
             name = "tailwind-rainbow";
             version = "0.2.1";
-            sha256 = "xxxx";
+            sha256 = "sha256-/AiGMgwCeD9B3y8LxTe6HoIswLuCnLbmwV7fxwfWSLw=";
         }
     ];
     

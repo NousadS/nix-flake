@@ -8,7 +8,7 @@
             publisher = "jeff-hykin";
             name = "better-cpp-syntax";
             version = "1.27.1";
-            sha256 = "xxxx";
+            sha256 = "sha256-GO/ooq50KLFsiEuimqTbD/mauQYcD/p2keHYo/6L9gw=";
         }
     ];
     

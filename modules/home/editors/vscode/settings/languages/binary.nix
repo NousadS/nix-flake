@@ -12,7 +12,7 @@
             publisher = "basdp";
             name = "language-gas-x86";
             version = "0.0.2";
-            sha256 = "xxxx";
+            sha256 = "sha256-PbXhOsoR0/5wXuFrzwCcauM1uGgfQoSRTj0gPVVZ4Kg=";
         }
     ];
 }
