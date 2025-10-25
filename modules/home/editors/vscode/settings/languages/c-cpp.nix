@@ -2,8 +2,13 @@
 
 {
     extensions = with pkgs.vscode-extensions; [
-        ms-vscode.cpptools
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+        {
+            publisher = "ms-vscode";
+            name = "cpptools";
+            version = "1.28.3";
+            sha256 = "sha256-AQ0fBHuk9Q2KbDXleMCo6HvKlKlAlmseHY81T/DldQ4=";
+        }
         {
             publisher = "jeff-hykin";
             name = "better-cpp-syntax";
