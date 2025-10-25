@@ -1,6 +1,10 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, self, ... }:
 
 {
+    imports = [
+        (self + "/homes/nousad/")
+    ];
+
     home-manager.useGlobalPkgs = true;
     home-manager.useUserPackages = true;
 

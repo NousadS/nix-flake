@@ -1,8 +1,18 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, self, ... } @ args:
 
 {
-    imports = [
-        ./configuration.nix
-        ./modules.nix
-    ];
+    users.users.nousad = {
+        isNormalUser = true;
+        description = "nousad";
+        extraGroups = [
+            "networkmanager"
+            "wheel"
+            "input"
+            "scanner"
+            "lp" 
+        ];
+        packages = [ ];
+    };
+
+    home-manager.users.nousad = import ./home.nix;
 }
