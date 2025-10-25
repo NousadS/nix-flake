@@ -1,13 +1,9 @@
-{ config, lib, pkgs, mkModule, ... }:
+{ config, lib, pkgs, mkModule, ... } @ args:
 
 mkModule {
-    group = "network";
-    name = "telegram-desktop";
-    body = {
-        environment.systemPackages = [
-            pkgs.telegram-desktop
-        ];
-    };
+    environment.systemPackages = [
+        pkgs.telegram-desktop
+    ];
 }
 
 

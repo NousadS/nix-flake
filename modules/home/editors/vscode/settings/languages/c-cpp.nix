@@ -1,7 +1,17 @@
-{ config, lib, pkgs, ... }:
-
 {
-    programs.vscode.userSettings = {
+    vscprofile,
+    config,
+    lib,
+    pkgs,
+    ...
+}: {
+    programs.vscode.profiles = {
+        ${vscprofile} = {
+            extensions = with pkgs.vscode-extensions; [
+    ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+    ];
+    
+    userSettings = {
         "[c]" = {
             "editor.defaultFormatter" = "ms-vscode.cpptools";
         };
@@ -26,5 +36,5 @@
                 "/include"
             ];
         };
-    };
+    };};
 }

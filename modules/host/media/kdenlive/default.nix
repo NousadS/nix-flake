@@ -1,13 +1,9 @@
-{ config, lib, pkgs, mkModule, ... }:
+{ config, lib, pkgs, mkModule, ... } @ args:
 
 mkModule {
-    group = "media";
-    name = "kdenlive";
-    body = {
-        environment.systemPackages = [
-            pkgs.kdePackages.kdenlive
-        ];
-    };
+    environment.systemPackages = [
+        pkgs.kdePackages.kdenlive
+    ];
 }
 
 

@@ -1,13 +1,9 @@
-{ config, lib, pkgs, mkModule, ... }:
+{ config, lib, pkgs, mkModule, ... } @ args:
 
 mkModule {
-    group = "media";
-    name = "gimp";
-    body = {
-        environment.systemPackages = [
-            pkgs.gimp3-with-plugins
-        ];
-    };
+    environment.systemPackages = [
+        pkgs.gimp3-with-plugins
+    ];
 }
 
 

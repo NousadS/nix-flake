@@ -1,12 +1,8 @@
-{ config, lib, pkgs, mkModule, ... }:
+{ config, lib, pkgs, mkModule, ... } @ args:
 
 mkModule {
-    group = "commands";
-    name = "tree";
-    body = {
-        environment.systemPackages = [
-            pkgs.tree
-        ];
-    };
+    environment.systemPackages = [
+        pkgs.tree
+    ];
 }
 

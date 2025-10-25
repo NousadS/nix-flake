@@ -1,15 +1,21 @@
 { config, lib, pkgs, ... }:
 
 {
-    programs.vscode.userSettings = {
+    extensions = with pkgs.vscode-extensions; [
+        bbenoist.nix
+        arrterian.nix-env-selector
+        kamadorueda.alejandra
+    ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+    ];
+    
+    userSettings = {
         "[nix]" = {
-            editor.defaultFormatter = "";
-            # editor.defaultFormatter = "kamadorueda.alejandra";
+            editor.defaultFormatter = "kamadorueda.alejandra";
             editor.formatOnPaste = false;
             editor.formatOnSave = false;
             editor.formatOnType = false;
         };
         
-        # alejandra.program = "alejandra";
+        alejandra.program = "alejandra --experimental-config ";
     };
 }

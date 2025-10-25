@@ -1,10 +1,6 @@
-{ config, lib, pkgs, mkModule, ... }:
+{ config, lib, pkgs, mkModule, ... } @ args:
 
 mkModule {
-    group = "browsers";
-    name = "firefox";
-    body = {
-        programs.firefox.enable = true;
-    };
+    programs.firefox.enable = true;
 }
 

@@ -1,13 +1,9 @@
-{ config, lib, pkgs, mkModule, ... }:
+{ config, lib, pkgs, mkModule, ... } @ args:
 
 mkModule {
-    group = "games";
-    name = "prism-launcher";
-    body = {
-        environment.systemPackages = [
-            pkgs.prismlauncher
-        ];
-    };
+    environment.systemPackages = [
+        pkgs.prismlauncher
+    ];
 }
 
 

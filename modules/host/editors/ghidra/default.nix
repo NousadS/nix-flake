@@ -1,12 +1,8 @@
-{ config, lib, pkgs, mkModule, ... }:
+{ config, lib, pkgs, mkModule, ... } @ args:
 
 mkModule {
-    group = "editors";
-    name = "ghidra";
-    body = { 
-        environment.systemPackages = [
-            pkgs.ghidra
-        ];
-    };
+    environment.systemPackages = [
+        pkgs.ghidra
+    ];
 }
 

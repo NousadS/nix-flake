@@ -1,7 +1,12 @@
 { config, lib, pkgs, ... }:
 
 {
-    programs.vscode.userSettings = {
+    
+    extensions = with pkgs.vscode-extensions; [
+        leonardssh.vscord
+    ];
+
+    userSettings = {
         vscord.status.idle.disconnectOnIdle = true;
     };
 }

@@ -1,12 +1,8 @@
-{ config, lib, pkgs, mkModule, ... }:
+{ config, lib, pkgs, mkModule, ... } @ args:
 
 mkModule {
-    group = "fetches";
-    name = "fastfetch";
-    body = {
-        environment.systemPackages = [
-            pkgs.fastfetch
-        ];
-    };
+    environment.systemPackages = [
+        pkgs.fastfetch
+    ];
 }
 

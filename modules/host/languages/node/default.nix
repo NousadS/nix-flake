@@ -1,11 +1,7 @@
-{ config, lib, pkgs, mkModule, ... }:
+{ config, lib, pkgs, mkModule, ... } @ args:
 
 mkModule {
-    group = "languages";
-    name = "node";
-    body = {
-        environment.systemPackages = [
-            pkgs.nodejs
-        ];
-    };
+    environment.systemPackages = [
+        pkgs.nodejs
+    ];
 }

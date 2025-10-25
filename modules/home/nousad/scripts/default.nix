@@ -1,15 +1,11 @@
-{ config, lib, pkgs, mkModule, self, ... }:
+{ config, lib, pkgs, mkModule, self, ... } @ args:
 
-mkModule {
-    group = "nousad";
-    name = "scripts";
-    body = {
-        home.file = {
-            ".nousad".source = self + "/assets/configs/dev";
-        }; 
+mkModule {  
+    home.file = {
+        ".nousad".source = self + "/assets/configs/dev";
+    }; 
 
-        home.sessionPath = [
-            "$HOME/.nousad/scripts/"
-        ];
-    };
+    home.sessionPath = [
+        "$HOME/.nousad/scripts/"
+    ];
 }

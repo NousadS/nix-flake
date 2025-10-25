@@ -1,7 +1,11 @@
 { config, lib, pkgs, ... }:
 
 {
-    programs.vscode.userSettings = {
+    extensions = with pkgs.vscode-extensions; [
+        pkief.material-icon-theme
+    ];
+
+    userSettings = {
         material-icon-theme = {
             folders = {
                 theme = "specific";

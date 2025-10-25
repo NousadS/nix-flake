@@ -1,12 +1,8 @@
-{ config, lib, pkgs, mkModule, ... }:
+{ config, lib, pkgs, mkModule, ... } @ args:
 
 mkModule {
-    group = "network";
-    name = "zoom";
-    body = {
-        environment.systemPackages = [
-            pkgs.zoom-us
-        ];
-    };
+    environment.systemPackages = [
+        pkgs.zoom-us
+    ];
 }
 

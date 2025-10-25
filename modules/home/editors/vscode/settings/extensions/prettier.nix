@@ -1,7 +1,11 @@
 { config, lib, pkgs, ... }:
 
 {
-    programs.vscode.userSettings = {
+    extensions = with pkgs.vscode-extensions; [
+        esbenp.prettier-vscode
+    ];
+
+    userSettings = {
         prettier.tabWidth = 4;
     };
 }

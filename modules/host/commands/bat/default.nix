@@ -1,10 +1,6 @@
-{ config, lib, pkgs, mkModule, ... }:
+{ config, lib, pkgs, mkModule, ... } @ args:
 
 mkModule {
-    group = "commands";
-    name = "bat";
-    body = {
-        programs.bat.enable = true;
-    };
+    programs.bat.enable = true;
 }
 

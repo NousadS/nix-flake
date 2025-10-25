@@ -1,7 +1,11 @@
 { config, lib, pkgs, ... }:
 
 {
-    programs.vscode.userSettings = {
+    programs.vscode.profiles.default.extensions = with pkgs.vscode-extensions; [
+    ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+    ];
+    
+    programs.vscode.profiles.default.userSettings = {
         "[json]" = {
             editor.defaultFormatter = "vscode.json-language-features";
             editor.tabSize = 4;

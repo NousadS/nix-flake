@@ -1,13 +1,9 @@
-{ config, lib, pkgs, mkModule, ... }:
+{ config, lib, pkgs, mkModule, ... } @ args:
 
 mkModule {
-    group = "browsers";
-    name = "tor";
-    body = {
-        environment.systemPackages = [
-            pkgs.tor
-            pkgs.tor-browser
-        ];
-    };
+    environment.systemPackages = [
+        pkgs.tor
+        pkgs.tor-browser
+    ];
 }
 

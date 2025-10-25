@@ -1,12 +1,8 @@
-{ config, lib, pkgs, mkModule, ... }:
+{ config, lib, pkgs, mkModule, ... } @ args:
 
 mkModule {
-    group = "commands";
-    name = "eza";
-    body = {
-        environment.systemPackages = [
-            pkgs.eza
-        ];
-    };
+    environment.systemPackages = [
+        pkgs.eza
+    ];
 }
 

@@ -1,10 +1,7 @@
-{ config, lib, pkgs, mkModule, ... }:
+{ config, lib, pkgs, mkModule, ... } @ args:
 
 mkModule {
-    group = "themes";
-    name = "default";
-
-    extraOptions = {
+    options = {
         modules.host.themes.default.theme = lib.mkOption {
             type = lib.types.nullOr lib.types.path;
             default = null;
@@ -24,8 +21,5 @@ mkModule {
         ./grub.nix
         ./theme.nix
     ];
-
-    body = {
-    };
 }
 

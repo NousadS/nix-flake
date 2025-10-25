@@ -1,12 +1,8 @@
-{ config, lib, pkgs, mkModule, ... }:
+{ config, lib, pkgs, mkModule, ... } @ args:
 
 mkModule {
-    group = "browsers";
-    name = "chrome";
-    body = {
-        environment.systemPackages = [
-            pkgs.google-chrome
-        ];
-    };
+    environment.systemPackages = [
+        pkgs.google-chrome
+    ];
 }
 

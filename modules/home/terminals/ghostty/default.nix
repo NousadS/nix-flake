@@ -1,31 +1,26 @@
-{ config, lib, pkgs, mkModule, stylix, self, ... }:
+{ config, lib, pkgs, mkModule, self, stylix, ... } @ args:
 
-mkModule {
-    group = "terminals";
-    name = "ghostty";
+mkModule {  
+    home.file = {
+        ".config/ghostty/config".text = ''
+            font-family = "MesloLGS NF"
 
-    body = {        
-        home.file = {
-            ".config/ghostty/config".text = ''
-                font-family = "MesloLGS NF"
+            cursor-style = bar
+            cursor-style-blink = true
 
-                cursor-style = bar
-                cursor-style-blink = true
+            background-opacity = 1.0
+            background-blur = 20
 
-                background-opacity = 1.0
-                background-blur = 20
+            window-padding-x = 2
+            window-padding-y = 2
 
-                window-padding-x = 2
-                window-padding-y = 2
+            keybind = f11=toggle_fullscreen
 
-                keybind = f11=toggle_fullscreen
-
-                theme = GruvboxDarkHard
-            '';
-        }; 
-        
-        stylix.targets = {
-            ghostty.enable = true;
-        };
+            theme = GruvboxDarkHard
+        '';
+    }; 
+    
+    stylix.targets = {
+        ghostty.enable = true;
     };
 }

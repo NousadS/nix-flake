@@ -1,12 +1,8 @@
-{ config, lib, pkgs, mkModule, ... }:
+{ config, lib, pkgs, mkModule, ... } @ args:
 
 mkModule {
-    group = "commands";
-    name = "ngrok";
-    body = {
-        environment.systemPackages = [
-            pkgs.ngrok
-        ];
-    };
+    environment.systemPackages = [
+        pkgs.ngrok
+    ];
 }
 

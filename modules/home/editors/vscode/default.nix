@@ -1,22 +1,20 @@
-{ config, lib, pkgs, mkModule, ... }:
+{ config, lib, pkgs, mkModule, self, stylix, ... } @ args:
 
-mkModule {
-    group = "editors";
-    name = "vscode";
-    
+mkModule {  
     imports = [
-        ./extensions.nix # Breaks pylance
-        ./keybinds.nix
-        ./settings
+        ./profiles/default.nix
     ];
+    
+    programs.vscode.enable = true;
+    programs.vscode.package = pkgs.vscode;
 
-    body = {
-        programs.vscode.enable = true;
+    stylix.targets.vscode.enable = true;
 
-        programs.vscode = {
-            enableUpdateCheck = false;
-            enableExtensionUpdateCheck = false;
-            mutableExtensionsDir = true;
-        };
+    programs.vscode.mutableExtensionsDir = true;
+
+    programs.vscode.profiles.default = {
+        enableUpdateCheck = false;
+        enableExtensionUpdateCheck = false;
     };
 }
+

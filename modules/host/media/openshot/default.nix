@@ -1,13 +1,9 @@
-{ config, lib, pkgs, mkModule, ... }:
+{ config, lib, pkgs, mkModule, ... } @ args:
 
 mkModule {
-    group = "media";
-    name = "openshot";
-    body = {
-        environment.systemPackages = [
-            pkgs.openshot-qt
-        ];
-    };
+    environment.systemPackages = [
+        pkgs.openshot-qt
+    ];
 }
 
 

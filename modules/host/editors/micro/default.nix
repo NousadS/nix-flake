@@ -1,12 +1,8 @@
-{ config, lib, pkgs, mkModule, ... }:
+{ config, lib, pkgs, mkModule, ... } @ args:
 
 mkModule {
-    group = "editors";
-    name = "micro";
-    body = {
-        environment.systemPackages = [
-            pkgs.micro
-        ];
-    };
+    environment.systemPackages = [
+        pkgs.micro
+    ];
 }
 

@@ -1,10 +1,5 @@
-{ config, lib, pkgs, mkModule, stylix, ... }:
+{ config, lib, pkgs, mkModule, stylix, ... } @ args:
 
-mkModule {
-    group = "editors";
-    name = "micro";
-
-    body = {
-        stylix.targets.micro.enable = true;
-    };
+mkModule {  
+    stylix.targets.micro.enable = true;
 }

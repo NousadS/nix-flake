@@ -1,0 +1,10 @@
+{ config, lib, pkgs, mkModule, ... } @ args:
+
+mkModule {
+    boot.loader.grub.enable = true;
+    boot.loader.grub.device = "nodev";
+    boot.loader.grub.useOSProber = true;
+    boot.loader.grub.efiSupport = true;
+
+    boot.loader.efi.canTouchEfiVariables = true;
+}

@@ -1,15 +1,11 @@
-{ config, lib, pkgs, mkModule, ... }:
+{ config, lib, pkgs, mkModule, ... } @ args:
 
 mkModule {
-    group = "languages";
-    name = "c-cpp";
-    body = {
-        environment.systemPackages = [
-            pkgs.gcc
-            pkgs.libgcc
-            pkgs.glibc
-            pkgs.gdb
-            pkgs.valgrind
-        ];
-    };
+    environment.systemPackages = [
+        pkgs.gcc
+        pkgs.libgcc
+        pkgs.glibc
+        pkgs.gdb
+        pkgs.valgrind
+    ];
 }

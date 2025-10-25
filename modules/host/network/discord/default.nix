@@ -1,13 +1,9 @@
-{ config, lib, pkgs, mkModule, ... }:
+{ config, lib, pkgs, mkModule, ... } @ args:
 
 mkModule {
-    group = "network";
-    name = "discord";
-    body = {
-        environment.systemPackages = [
-            pkgs.discord
-        ];
-    };
+    environment.systemPackages = [
+        pkgs.discord
+    ];
 }
 
 

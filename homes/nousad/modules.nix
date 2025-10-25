@@ -1,26 +1,26 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, self, ... }:
 
 {
     imports = [
         # ../../modules/core-home/...
 
-        ../../modules/home
+        (self + "/modules/home")
     ];
 
     modules.home = {
-        desktops.gnome.enable = true;
+        # desktops.gnome.enable = true;
         
-        editors.neovim.enable = true;
-        editors.vscode.enable = true;
+        # editors.neovim.enable = true;
+        # editors.vscode.enable = true;
 
-        fetches.fastfetch.enable = true;
+        # fetches.fastfetch.enable = true;
 
-        nousad.scripts.enable = true;
+        # nousad.scripts.enable = true;
 
-        services.solaar.enable = true;
+        # services.solaar.enable = true;
 
-        shells.zsh.enable = true;
+        # shells.zsh.enable = true;
 
-        terminals.ghostty.enable = true;
+        # terminals.ghostty.enable = true;
     };
 }

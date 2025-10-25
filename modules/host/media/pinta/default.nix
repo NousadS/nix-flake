@@ -1,13 +1,9 @@
-{ config, lib, pkgs, mkModule, ... }:
+{ config, lib, pkgs, mkModule, ... } @ args:
 
 mkModule {
-    group = "media";
-    name = "pinta";
-    body = {
-        environment.systemPackages = [
-            pkgs.pinta
-        ];
-    };
+    environment.systemPackages = [
+        pkgs.pinta
+    ];
 }
 
 

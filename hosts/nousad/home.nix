@@ -6,5 +6,5 @@
 
     home-manager.backupFileExtension = "backup";
 
-    home-manager.extraSpecialArgs = { inherit inputs; self = inputs.self; stylix = inputs.stylix; };
+    home-manager.extraSpecialArgs = inputs // { inherit inputs; };
 }

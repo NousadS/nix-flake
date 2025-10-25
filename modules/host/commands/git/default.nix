@@ -1,10 +1,6 @@
-{ config, lib, pkgs, mkModule, ... }:
+{ config, lib, pkgs, mkModule, ... } @ args:
 
 mkModule {
-    group = "commands";
-    name = "git";
-    body = {
-        programs.git.enable = true;
-    };
+    programs.git.enable = true;
 }
 

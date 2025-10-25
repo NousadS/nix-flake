@@ -1,32 +1,32 @@
 { config, lib, pkgs, ... } @ args:
 
 let
-    mkHomeModule = import ./mkHomeModule.nix;
+    current = ./.;
 
-    currentDir = ./.;
-    
-    modules = builtins.concatLists 
-        (map
-            (group:
-                let
-                    dir = builtins.readDir "${currentDir}/${group}";
-                    modules = builtins.filter
-                        (d: dir.${d} == "directory")
-                        (builtins.attrNames dir);
-                in
-                    map (n: "${currentDir}/${group}/${n}") modules
-            )
-            (
-                let 
-                    groups = builtins.readDir "${currentDir}";
-                in 
-                    builtins.filter
-                        (g: groups.${g} == "directory")
-                        (builtins.attrNames groups)
-            )
-        );
+    hasDefaultNix = dir: builtins.pathExists (dir + "/default.nix");
+
+    groups = builtins.filter
+        (name: let 
+            d = (builtins.readDir current).${name};
+            in d == "directory")
+        (builtins.attrNames (builtins.readDir current));
+
+    dynamicModules = builtins.concatMap (group: let
+        groupPath = "${current}/${group}";
+        groupDir = builtins.readDir groupPath;
+        moduleNames = builtins.filter (n:
+            groupDir.${n} == "directory" &&
+            hasDefaultNix (groupPath + "/" + n)
+        ) (builtins.attrNames groupDir);
+    in
+        map (name: builtins.trace "Importing ${group}/${name} as a home module." 
+            (import "${groupPath}/${name}" (args // {
+                mkModule = (import ./mkHomeModule.nix { inherit group name; });
+            }))
+        ) moduleNames
+    ) groups;
 in {
-    imports = map (path: import path (args // {
-        mkModule = mkHomeModule;
-    })) modules;
+    imports = dynamicModules ++ [
+        ./fallback.nix
+    ];
 }

@@ -1,7 +1,12 @@
 { config, lib, pkgs, ... }:
 
 {
-    programs.vscode.userSettings = {
+    programs.vscode.profiles.default.extensions = with pkgs.vscode-extensions; [
+        bierner.markdown-preview-github-styles
+    ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+    ];
+    
+    programs.vscode.profiles.default.userSettings = {
         "[markdown]" = {
             editor.defaultFormatter = "esbenp.prettier-vscode";
         };
