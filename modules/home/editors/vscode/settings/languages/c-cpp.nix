@@ -1,8 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-    extensions = with pkgs.vscode-extensions; [
-    ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+    extensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
             publisher = "ms-vscode";
             name = "cpptools";
@@ -27,7 +26,7 @@
         };
 
         "C_Cpp" = {
-            clang_format_fallbackStyle = "LLVM";
+            clang_format_fallbackStyle = "{ BasedOnStyle: Google, UseTab: Never, IndentWidth: 4, AllowShortFunctionsOnASingleLine: All, AllowShortEnumsOnASingleLine: true, AllowShortIfStatementsOnASingleLine: AllIfsAndElse, AllowShortLoopsOnASingleLine: true, ColumnLimit: 88 }";
             clang_format_sortIncludes = true;
 
             vcFormat.indent.caseContentsWhenBlock = true;
