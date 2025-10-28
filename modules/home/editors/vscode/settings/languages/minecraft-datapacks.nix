@@ -12,7 +12,7 @@
             publisher = "nobuwu";
             name = "mc-color";
             version = "3.1.2";
-            sha256 = "sha256-/AiGMgwCeD9B3y8LxTe6HoIswLuCnLbmwV7fxwfWSLw=";
+            sha256 = "sha256-5FxI7+v09KMGBc2iUea6PGTqgfNiy1PVsDoIDvIVjBo=";
         }
     ];
 }

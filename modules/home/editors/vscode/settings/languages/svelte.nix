@@ -14,7 +14,7 @@
             publisher = "sebsojeda";
             name = "vscode-svx";
             version = "1.0.0";
-            sha256 = "sha256-/AiGMgwCeD9B3y8LxTe6HoIswLuCnLbmwV7fxwfWSLw=";
+            sha256 = "sha256-5YLeTJrkQsJSjYMmZMDJ0sVvvbhuQCdr2hhHIROb094=";
         }
     ];
     
