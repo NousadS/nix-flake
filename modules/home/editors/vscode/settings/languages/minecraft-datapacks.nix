@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-    programs.vscode.profiles.default.extensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+    extensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
             publisher = "ms-vscode";
             name = "hexeditor";

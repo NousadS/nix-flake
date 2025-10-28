@@ -1,11 +1,11 @@
 { config, lib, pkgs, ... }:
 
 {
-    programs.vscode.profiles.default.extensions = with pkgs.vscode-extensions; [
+    extensions = with pkgs.vscode-extensions; [
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
     ];
     
-    programs.vscode.profiles.default.userSettings = {
+    userSettings = {
         "[vue]" = {
             editor.tabSize = 4;
             editor.defaultFormatter = "Vue.volar";

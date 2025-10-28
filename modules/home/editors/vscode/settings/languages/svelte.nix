@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-    programs.vscode.profiles.default.extensions = with pkgs.vscode-extensions; [
+    extensions = with pkgs.vscode-extensions; [
         svelte.svelte-vscode
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
@@ -18,7 +18,7 @@
         }
     ];
     
-    programs.vscode.profiles.default.userSettings = {
+    userSettings = {
         "[svelte]" = {
             editor.defaultFormatter = "svelte.svelte-vscode";
         };

@@ -29,8 +29,19 @@ let
 
     ../settings/languages/binary.nix
     ../settings/languages/c-cpp.nix
+    ../settings/languages/css.nix
+    ../settings/languages/html.nix
+    ../settings/languages/js-ts.nix
+    ../settings/languages/json.nix
+    ../settings/languages/markdown.nix
+    ../settings/languages/minecraft-datapacks.nix
     ../settings/languages/nix.nix
     ../settings/languages/python.nix
+    ../settings/languages/shell.nix
+    ../settings/languages/svelte.nix
+    ../settings/languages/svg.nix
+    ../settings/languages/toml.nix
+    ../settings/languages/vue.nix
   ];
 
   # Import each module and separate extensions from other attributes
