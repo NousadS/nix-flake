@@ -30,6 +30,7 @@
         bootloader.grub.enable = false;
         commands.alejandra.enable = false;
         keyboards.short.enable = false;
+        editors.logseq.enable = false;
         # desktops.gnome.enable = false;
         # browsers.chrome.enable = true;
         # browsers.firefox.enable = false;
