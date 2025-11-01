@@ -3,18 +3,17 @@
 mkModule {  
     imports = [
         ./profiles/default.nix
+        ./profiles/minecraft-datapacks.nix
+        ./profiles/nix.nix
+        ./profiles/python.nix
+        ./profiles/svelte.nix
+        ./profiles/web.nix
     ];
     
     programs.vscode.enable = true;
     programs.vscode.package = pkgs.vscode;
-
-    stylix.targets.vscode.enable = true;
-
     programs.vscode.mutableExtensionsDir = true;
 
-    programs.vscode.profiles.default = {
-        enableUpdateCheck = false;
-        enableExtensionUpdateCheck = false;
-    };
+    stylix.targets.vscode.enable = true;
 }
 

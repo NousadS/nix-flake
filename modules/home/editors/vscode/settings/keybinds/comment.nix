@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-    programs.vscode.profiles.default.keybindings = [
+    keybindings = [
         {
             key = "ctrl+/";
             command = "workbench.action.addComment";

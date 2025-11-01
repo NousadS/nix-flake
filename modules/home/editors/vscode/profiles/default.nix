@@ -1,72 +1,56 @@
 { config, lib, pkgs, ... } @ args:
 
 let
-  profilePaths = [
-    ../settings/common/editor
-    ../settings/common/explorer
-    ../settings/common/files
-    ../settings/common/terminal
-    ../settings/common/window
-    ../settings/common/workbench
+    settings = [
+        "common/global"
 
-    ../settings/extensions/ansi.nix
-    ../settings/extensions/batch-rename.nix
-    ../settings/extensions/better-comments.nix
-    ../settings/extensions/c-spell.nix
-    ../settings/extensions/change-case.nix
-    ../settings/extensions/choose-a-license.nix
-    ../settings/extensions/codesnap.nix
-    ../settings/extensions/cursor-char-code.nix
-    ../settings/extensions/file-properties.nix
-    ../settings/extensions/google-translate.nix
-    ../settings/extensions/hide-files.nix
-    ../settings/extensions/live-server.nix
-    ../settings/extensions/material-icon-theme.nix
-    ../settings/extensions/path-intellisense.nix
-    ../settings/extensions/prettier.nix
-    ../settings/extensions/rename-replace.nix
-    ../settings/extensions/vscord.nix
+        "common/associations"
+        "common/cursors"
+        "common/editor"
+        "common/explorer"
+        "common/files"
+        "common/fonts"
+        "common/terminal"
+        "common/window"
+        "common/workbench"
 
-    ../settings/languages/binary.nix
-    ../settings/languages/c-cpp.nix
-    ../settings/languages/css.nix
-    ../settings/languages/html.nix
-    ../settings/languages/js-ts.nix
-    ../settings/languages/json.nix
-    ../settings/languages/markdown.nix
-    ../settings/languages/minecraft-datapacks.nix
-    ../settings/languages/nix.nix
-    ../settings/languages/python.nix
-    ../settings/languages/shell.nix
-    ../settings/languages/svelte.nix
-    ../settings/languages/svg.nix
-    ../settings/languages/toml.nix
-    ../settings/languages/vue.nix
-  ];
+        "keybinds/comment"
+        "keybinds/formatting"
+        "keybinds/terminal"
 
-  # Import each module and separate extensions from other attributes
-  importedModules = map (path:
-    let
-      module = import path args;
-    in
-    {
-      extensions = module.extensions or [];
-      otherAttrs = removeAttrs module [ "extensions" ];
-    }
-  ) profilePaths;
+        "extensions/ansi"
+        "extensions/batch-rename"
+        "extensions/better-comments"
+        "extensions/c-spell"
+        "extensions/change-case"
+        "extensions/choose-a-license"
+        "extensions/codesnap"
+        "extensions/cursor-char-code"
+        "extensions/file-properties"
+        "extensions/google-translate"
+        "extensions/hide-files"
+        "extensions/material-icon-theme"
+        "extensions/path-intellisense"
+        "extensions/prettier"
+        "extensions/rename-replace"
+        "extensions/vscord"
 
-  # Concatenate all extensions lists
-  allExtensions = lib.concatLists (map (m: m.extensions) importedModules);
+        "languages/binary"
+        "languages/c-cpp"
+        "languages/css"
+        "languages/html"
+        "languages/js-ts"
+        "languages/json"
+        "languages/markdown"
+        "languages/minecraft-datapacks"
+        "languages/nix"
+        "languages/python"
+        "languages/shell"
+        "languages/svelte"
+        "languages/svg"
+        "languages/toml"
+        "languages/vue"
+    ];
 
-  # Merge all other attributes (e.g., userSettings)
-  combinedOtherAttrs = lib.foldl' lib.recursiveUpdate {} (map (m: m.otherAttrs) importedModules);
-
-  # Combine extensions and other attributes into final config
-  combinedConfig = combinedOtherAttrs // { extensions = allExtensions; };
-in
-{
-  programs.vscode = {
-    extensions = combinedConfig.extensions or [];
-    userSettings = combinedConfig.userSettings or combinedConfig.settings or {};
-  };
-}
+    mkProfile = import ../mkProfile.nix;
+in mkProfile (args // { profile = "default"; inherit settings;  })

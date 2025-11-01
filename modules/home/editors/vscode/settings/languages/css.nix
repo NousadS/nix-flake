@@ -14,10 +14,12 @@
     
     userSettings = {
         "[css]" = {
-            editor.defaultFormatter = "vscode.css-language-features";
+            editor.tabSize = 4;
+            editor.defaultFormatter = "esbenp.prettier-vscode";
         };
 
         "[scss]" = {
+            editor.tabSize = 4;
             editor.defaultFormatter = "esbenp.prettier-vscode";
         };
     };

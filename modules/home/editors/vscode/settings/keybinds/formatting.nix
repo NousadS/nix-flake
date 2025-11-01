@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-    programs.vscode.profiles.default.keybindings = [
+    keybindings = [
         {
             key = "ctrl+shift+o";
             command = "editor.action.organizeImports";

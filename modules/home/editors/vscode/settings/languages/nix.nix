@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, self, ... }:
 
 {
     extensions = with pkgs.vscode-extensions; [
@@ -16,6 +16,6 @@
             editor.formatOnType = false;
         };
         
-        alejandra.program = "alejandra --experimental-config ";
+        alejandra.program = "alejandra --experimental-config ${self + "/assets/configs/alejandra/config.toml"}";
     };
 }

@@ -6,12 +6,7 @@
     ];
     
     userSettings = {
-        "[json]" = {
-            editor.tabSize = 4;
-            editor.defaultFormatter = "esbenp.prettier-vscode";
-        };
-
-        "[jsonc]" = {
+        "[yaml]" = {
             editor.tabSize = 4;
             editor.defaultFormatter = "esbenp.prettier-vscode";
         };

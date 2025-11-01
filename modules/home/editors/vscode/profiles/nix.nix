@@ -19,7 +19,6 @@ let
         "keybinds/terminal"
 
         "extensions/ansi"
-        "extensions/batch-rename"
         "extensions/better-comments"
         "extensions/c-spell"
         "extensions/change-case"
@@ -31,19 +30,11 @@ let
         "extensions/hide-files"
         "extensions/material-icon-theme"
         "extensions/path-intellisense"
-        "extensions/prettier"
         "extensions/rename-replace"
         "extensions/vscord"
 
-        "languages/css"
-        "languages/html"
-        "languages/js-ts"
-        "languages/json"
-        "languages/markdown"
-        "languages/svg"
-        "languages/toml"
-        "languages/yaml"
+        "languages/nix"
     ];
 
     mkProfile = import ../mkProfile.nix;
-in mkProfile (args // { profile = "web"; inherit settings;  })
+in mkProfile (args // { profile = "nix"; inherit settings;  })
