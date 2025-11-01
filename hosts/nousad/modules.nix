@@ -28,7 +28,7 @@
 
     modules.host = {
         bootloader.grub.enable = false;
-        commands.alejandra.enable = false;
+        commands.alejandra.enable = true;
         keyboards.short.enable = false;
         editors.logseq.enable = false;
         # desktops.gnome.enable = false;
