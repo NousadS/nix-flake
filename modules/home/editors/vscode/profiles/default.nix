@@ -46,6 +46,7 @@ let
         "languages/nix"
         "languages/python"
         "languages/shell"
+        "languages/sql"
         "languages/svelte"
         "languages/svg"
         "languages/toml"
