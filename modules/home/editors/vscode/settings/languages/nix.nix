@@ -1,4 +1,4 @@
-{ config, lib, pkgs, self, ... }:
+{ config, lib, pkgs, self, inputs, system, ... }:
 
 {
     extensions = with pkgs.vscode-extensions; [

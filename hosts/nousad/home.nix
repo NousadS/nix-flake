@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, self, ... }:
+{ config, pkgs, inputs, self, system, ... } @ args:
 
 {
     imports = [
@@ -10,5 +10,5 @@
 
     home-manager.backupFileExtension = "backup";
 
-    home-manager.extraSpecialArgs = inputs // { inherit inputs; };
+    home-manager.extraSpecialArgs = inputs // { inherit inputs self system; };
 }
