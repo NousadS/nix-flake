@@ -6,7 +6,7 @@
             publisher = "ms-vscode";
             name = "cpptools";
             version = "1.29.0";
-            sha256 = "sha256-AQ0fBHuk9Q2KbDXleMCo6HvKlKlAlmseHY81T/DldQ4=";
+            sha256 = "sha256-uucLN5MjooMu/n2sRPLoZNWm5MBKLK6OPNsqMWt6EY8=";
         }
         {
             publisher = "jeff-hykin";
@@ -18,7 +18,7 @@
             publisher = "guyutongxue";
             name = "cpp-reference";
             version = "0.2.5";
-            sha256 = "sha256-GO/ooq50KLFsiEuimqTbD/mauQYcD/p2keHYo/6L9gw=";
+            sha256 = "sha256-WpNh9A04RlHBurA4V16kWh3njnf9RdlUOEYLJ62sj3Q=";
         }
     ];
     
