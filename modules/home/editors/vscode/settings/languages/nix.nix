@@ -16,6 +16,6 @@
             editor.formatOnType = false;
         };
         
-        alejandra.program = "alejandra --experimental-config ${self + "/assets/configs/alejandra/config.toml"}";
+        alejandra.program = "${inputs.alejandra.defaultPackage.${system}} --experimental-config ${self + "/assets/configs/alejandra/config.toml"}";
     };
 }
