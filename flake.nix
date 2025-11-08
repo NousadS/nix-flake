@@ -28,13 +28,13 @@
         lib = pkgs.lib;
     in {
         nixosConfigurations = {
-            nousad = nixpkgs.lib.nixosSystem {
+            laptop = nixpkgs.lib.nixosSystem {
                 inherit system;
 
                 specialArgs = { inherit self inputs system; };
 
                 modules = [
-                    ./hosts/nousad
+                    ./hosts/laptop
 
                     inputs.home-manager.nixosModules.home-manager
                     inputs.stylix.nixosModules.stylix
