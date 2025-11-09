@@ -8,15 +8,17 @@
     pkgs,
     ...
 }: let
-    opt =
-        (args.options or {})
-        // {
-            modules.${category}.${group}.${name}.enable = lib.mkOption {
-                default = true;
-                description = "enable ${name}";
-                type = lib.types.bool;
-            };
-        };
+    opt = {
+        modules.${category}.${group}.${name} =
+            {
+                enable = lib.mkOption {
+                    default = true;
+                    description = "enable ${name}";
+                    type = lib.types.bool;
+                };
+            }
+            // (args.options or {});
+    };
 
     imp = args.imports or [];
 
