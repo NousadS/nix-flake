@@ -3,6 +3,7 @@
 mkModule {  
     imports = [
         ./custom-keybinds.nix
+        ./files.nix
     ];
 
     home.packages = with pkgs.gnomeExtensions; [

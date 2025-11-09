@@ -12,7 +12,7 @@ mkModule {
     };
 
     home.file = {
-        ".p10k.zsh".source = self + "/assets/configs/zsh/p10k.zsh";
-        ".zshrc".source = self + "/assets/configs/zsh/rc.zsh";
+        ".p10k.zsh".source = self + "/assets/zsh/p10k.zsh";
+        ".zshrc".source = self + "/assets/zsh/rc.zsh";
     };
 }

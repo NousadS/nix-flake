@@ -2,9 +2,9 @@
 
 mkModule {  
     home.file = {
-        ".config/solaar/config.yaml".source = self + "/assets/configs/solaar/config.yaml";
-        ".config/solaar/rules.yaml".source = self + "/assets/configs/solaar/rules.yaml";
+        ".config/solaar/config.yaml".source = self + "/assets/solaar/config.yaml";
+        ".config/solaar/rules.yaml".source = self + "/assets/solaar/rules.yaml";
         
-        # ".config/autostart/solaar.desktop".source = self + "/assets/configs/solaar/solaar.desktop";
+        # ".config/autostart/solaar.desktop".source = self + "/assets/solaar/solaar.desktop";
     };
 }
