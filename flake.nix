@@ -10,9 +10,6 @@
         stylix.url = "github:nix-community/stylix/release-25.05";
         stylix.inputs.nixpkgs.follows = "nixpkgs";
 
-        nix4nvchad.url = "github:nix-community/nix4nvchad";
-        nix4nvchad.inputs.nixpkgs.follows = "nixpkgs";
-
         solaar.url = "https://flakehub.com/f/Svenum/Solaar-Flake/0.1.2";
         solaar.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -34,7 +31,9 @@
             laptop = nixpkgs.lib.nixosSystem {
                 inherit system;
 
-                specialArgs = {inherit self inputs system;};
+                specialArgs = {
+                    inherit self inputs system;
+                };
 
                 modules = [
                     ./hosts/laptop
