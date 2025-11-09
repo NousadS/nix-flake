@@ -1,17 +1,22 @@
-{ category, group, name }:
-
-{ ... } @ args:
-
-{ config, lib, pkgs, ... }:
-
-let
-    opt = (args.options or {}) // {
-        modules.${category}.${group}.${name}.enable = lib.mkOption {
-            default = true;
-            description = "enable ${name}";
-            type = lib.types.bool;
+{
+    category,
+    group,
+    name,
+}: {...} @ args: {
+    config,
+    lib,
+    pkgs,
+    ...
+}: let
+    opt =
+        (args.options or {})
+        // {
+            modules.${category}.${group}.${name}.enable = lib.mkOption {
+                default = true;
+                description = "enable ${name}";
+                type = lib.types.bool;
+            };
         };
-    };
 
     imp = args.imports or [];
 

@@ -1,5 +1,10 @@
-{ config, lib, pkgs, mkModule, ... } @ args:
-
+{
+    config,
+    lib,
+    pkgs,
+    mkModule,
+    ...
+} @ args:
 mkModule {
     options = {
         modules.host.themes.default.theme = lib.mkOption {
@@ -22,4 +27,3 @@ mkModule {
         ./theme.nix
     ];
 }
-

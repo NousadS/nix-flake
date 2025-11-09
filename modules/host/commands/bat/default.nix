@@ -1,6 +1,10 @@
-{ config, lib, pkgs, mkModule, ... } @ args:
-
+{
+    config,
+    lib,
+    pkgs,
+    mkModule,
+    ...
+} @ args:
 mkModule {
     programs.bat.enable = true;
 }
-

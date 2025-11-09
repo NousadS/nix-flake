@@ -1,5 +1,12 @@
-{ config, lib, pkgs, mkModule, inputs, system, ... } @ args:
-
+{
+    config,
+    lib,
+    pkgs,
+    mkModule,
+    inputs,
+    system,
+    ...
+} @ args:
 mkModule {
     environment.systemPackages = [
         inputs.nix4nvchad.packages.${system}.default
@@ -21,7 +28,7 @@ mkModule {
 
     #     options = {
     #         scrolloff = 5;
-    #         cursorlineopt = "line"; 
+    #         cursorlineopt = "line";
     #         tabstop    = 4;
     #         shiftwidth = 4;
     #         expandtab  = true;
@@ -45,7 +52,6 @@ mkModule {
     #         { mode = [ "n" "v" ]; key = "k"; action = "<Nop>"; }
     #         { mode = [ "n" "v" ]; key = "l"; action = "<Nop>"; }
 
-
     #         { mode = [ "n" "v" ]; key = "a"; action = "h"; } # left
     #         { mode = [ "n" "v" ]; key = "w"; action = "k"; } # up
     #         { mode = [ "n" "v" ]; key = "s"; action = "j"; } # down
@@ -60,7 +66,7 @@ mkModule {
     #         #{ mode = [ "n" "v" ]; key = "d"; action = "l"; } # right
 
     #         { mode = [ "n" ]; key = "."; action = ":Neotree<CR>"; }
-            
+
     #         {
     #             mode = [ "i" "v" ];
     #             key = "kk";
@@ -94,12 +100,12 @@ mkModule {
     #             key = "ee";
     #             action = ":w<CR>";
     #         }
-            
+
     #         {
     #             mode = [ "n" ];
     #             key = "qq";
     #             action = ":q<CR>";
-    #         } 
+    #         }
 
     #         {
     #             mode = [ "i" ];
@@ -120,8 +126,7 @@ mkModule {
     #             mode = [ "i" ];
     #             key = "<Shift>d";
     #             action = "l"; # right
-    #         } 
+    #         }
     #    ];
     # };
 }
-

@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
+    config,
+    lib,
+    pkgs,
+    ...
+}: {
     userSettings.terminal = {
         integrated = {
             defaultProfile.windows = "Command Prompt";

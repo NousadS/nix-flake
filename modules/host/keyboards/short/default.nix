@@ -1,5 +1,10 @@
-{ config, lib, pkgs, mkModule, ... } @ args:
-
+{
+    config,
+    lib,
+    pkgs,
+    mkModule,
+    ...
+} @ args:
 mkModule {
     services.xserver.xkb = {
         layout = "us,ru";

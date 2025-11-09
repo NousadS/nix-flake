@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
+    config,
+    lib,
+    pkgs,
+    ...
+}: {
     userSettings.files.associations = {
         "*.json" = "json";
         "*.jsonc" = "jsonc";

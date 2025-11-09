@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... } @ args:
-
-let
+{
+    config,
+    lib,
+    pkgs,
+    ...
+} @ args: let
     settings = [
         "common/global"
 
@@ -54,4 +57,9 @@ let
     ];
 
     mkProfile = import ../mkProfile.nix;
-in mkProfile (args // { profile = "default"; inherit settings;  })
+in
+    mkProfile (args
+    // {
+        profile = "default";
+        inherit settings;
+    })

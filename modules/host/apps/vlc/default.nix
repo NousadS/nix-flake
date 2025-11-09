@@ -1,9 +1,12 @@
-{ config, lib, pkgs, mkModule, ... }:
-
+{
+    config,
+    lib,
+    pkgs,
+    mkModule,
+    ...
+}:
 mkModule {
     environment.systemPackages = [
         pkgs.vlc
     ];
 }
-
-

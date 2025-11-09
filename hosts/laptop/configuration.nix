@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+    config,
+    pkgs,
+    ...
+}: {
     system.stateVersion = "25.05";
     networking.hostName = "nousad";
 

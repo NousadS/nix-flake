@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
+    config,
+    lib,
+    pkgs,
+    ...
+}: {
     extensions = with pkgs.vscode-extensions; [
         pkief.material-icon-theme
     ];
@@ -16,42 +19,42 @@
                         "base" = "command";
                         "color" = "green-500";
                         "lightColor" = "green-700";
-                        "folderNames" = [ "sudo" ];
+                        "folderNames" = ["sudo"];
                     }
                     {
                         "name" = "lexer";
                         "base" = "src";
                         "color" = "green-500";
                         "lightColor" = "green-700";
-                        "folderNames" = [ "lexer" ];
+                        "folderNames" = ["lexer"];
                     }
                     {
                         "name" = "blueprints";
                         "base" = "routes";
                         "color" = "blue-500";
                         "lightColor" = "blue-700";
-                        "folderNames" = [ "blueprint" "blueprints" ];
+                        "folderNames" = ["blueprint" "blueprints"];
                     }
                     {
                         "name" = "grouper";
                         "base" = "element";
                         "color" = "red-500";
                         "lightColor" = "red-700";
-                        "folderNames" = [ "grouper" ];
+                        "folderNames" = ["grouper"];
                     }
                     {
                         "name" = "parser";
                         "base" = "api";
                         "color" = "light-blue-500";
                         "lightColor" = "light-blue-700";
-                        "folderNames" = [ "parser" ];
+                        "folderNames" = ["parser"];
                     }
                     {
                         "name" = "compiler";
                         "base" = "core";
                         "color" = "orange-500";
                         "lightColor" = "orange-700";
-                        "folderNames" = [ "compiler" ];
+                        "folderNames" = ["compiler"];
                     }
                     {
                         "name" = "dreambeard";
@@ -70,14 +73,14 @@
                         "base" = "admin";
                         "color" = "blue-700";
                         "lightColor" = "blue-700";
-                        "folderNames" = [ "user" "users" ];
+                        "folderNames" = ["user" "users"];
                     }
                     {
                         "name" = "labler";
                         "base" = "routes";
                         "color" = "blue-700";
                         "lightColor" = "blue-700";
-                        "folderNames" = [ "labeler" "labelers" ];
+                        "folderNames" = ["labeler" "labelers"];
                     }
                     {
                         "name" = "check";
@@ -96,28 +99,28 @@
                         "base" = "enum";
                         "color" = "green-500";
                         "lightColor" = "green-500";
-                        "folderNames" = [ "id" "ids" ];
+                        "folderNames" = ["id" "ids"];
                     }
                     {
                         "name" = "tables";
                         "base" = "database";
                         "color" = "green-500";
                         "lightColor" = "green-500";
-                        "folderNames" = [ "table" "tables" ];
+                        "folderNames" = ["table" "tables"];
                     }
                     {
                         "name" = "storage";
                         "base" = "database";
                         "color" = "green-500";
                         "lightColor" = "green-500";
-                        "folderNames" = [ "storage" ];
+                        "folderNames" = ["storage"];
                     }
                     {
                         "name" = "desktops";
                         "base" = "desktop";
                         "color" = "green-500";
                         "lightColor" = "green-500";
-                        "folderNames" = [ "desktops" ];
+                        "folderNames" = ["desktops"];
                     }
                 ];
             };

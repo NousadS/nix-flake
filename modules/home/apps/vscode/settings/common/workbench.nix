@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
+    config,
+    lib,
+    pkgs,
+    ...
+}: {
     userSettings.workbench = {
         iconTheme = "material-icon-theme";
         colorTheme = "Stylix";

@@ -1,5 +1,10 @@
-{ config, lib, pkgs, mkModule, ... } @ args:
-
+{
+    config,
+    lib,
+    pkgs,
+    mkModule,
+    ...
+} @ args:
 mkModule {
     time.timeZone = "Europe/Berlin";
 
@@ -17,5 +22,3 @@ mkModule {
         LC_TIME = "en_US.UTF-8";
     };
 }
-
-

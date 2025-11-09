@@ -1,6 +1,12 @@
-{ config, lib, pkgs, mkModule, self, ... } @ args:
-
-mkModule {  
+{
+    config,
+    lib,
+    pkgs,
+    mkModule,
+    self,
+    ...
+} @ args:
+mkModule {
     programs.zsh.enable = true;
 
     programs.zsh.shellAliases = {

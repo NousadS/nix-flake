@@ -1,6 +1,10 @@
-{ config, lib, pkgs, stylix, ... }:
-
 {
+    config,
+    lib,
+    pkgs,
+    stylix,
+    ...
+}: {
     fonts.packages = [
         pkgs.fira-code
         pkgs.fira-mono

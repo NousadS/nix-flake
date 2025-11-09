@@ -1,6 +1,12 @@
-{ config, lib, pkgs, mkModule, self, ... } @ args:
-
-mkModule {  
+{
+    config,
+    lib,
+    pkgs,
+    mkModule,
+    self,
+    ...
+} @ args:
+mkModule {
     imports = [
         ./custom-keybinds.nix
         ./files.nix

@@ -1,8 +1,13 @@
-{ config, lib, pkgs, mkModule, ... } @ args:
-
+{
+    config,
+    lib,
+    pkgs,
+    mkModule,
+    ...
+} @ args:
 mkModule {
     services.pulseaudio.enable = false;
-    
+
     services.pipewire = {
         enable = true;
         alsa.enable = true;

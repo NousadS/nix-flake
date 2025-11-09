@@ -1,11 +1,16 @@
-{ config, lib, pkgs, mkModule, ... } @ args:
-
+{
+    config,
+    lib,
+    pkgs,
+    mkModule,
+    ...
+} @ args:
 mkModule {
     services.printing.enable = true;
 
-    services.printing.drivers = [ 
+    services.printing.drivers = [
         pkgs.gutenprint
-        pkgs.cnijfilter2 
+        pkgs.cnijfilter2
     ];
 
     hardware.sane.enable = true;

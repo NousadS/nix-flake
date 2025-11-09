@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
+    config,
+    lib,
+    pkgs,
+    ...
+}: {
     extensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
             publisher = "ms-vscode";
@@ -21,7 +24,7 @@
             sha256 = "sha256-WpNh9A04RlHBurA4V16kWh3njnf9RdlUOEYLJ62sj3Q=";
         }
     ];
-    
+
     userSettings = {
         "[c]" = {
             "editor.defaultFormatter" = "ms-vscode.cpptools";

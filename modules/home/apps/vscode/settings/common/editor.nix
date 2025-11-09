@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
+    config,
+    lib,
+    pkgs,
+    ...
+}: {
     userSettings.editor = {
         selectionClipboard = false;
         autoClosingDelete = "never";
@@ -8,6 +11,6 @@
         linkedEditing = true;
         gotoLocation.multipleDefinitions = "goto";
         stickyScroll.enabled = false;
-        rulers = [ 88 ];
+        rulers = [88];
     };
 }

@@ -1,29 +1,34 @@
-{ config, lib, pkgs, ... }:
-
 {
-    extensions = with pkgs.vscode-extensions; [
-        charliermarsh.ruff
-    ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-        {
-            publisher = "ms-python";
-            name = "python";
-            version = "2025.13.2025090201";
-            sha256 = "sha256-Sq/XYi72oDjcGenoswtLuwzsIDwauxueo8HhuPvwWVU==";
-        }
-        {
-            publisher = "ms-python";
-            name = "vscode-pylance";
-            version = "2025.7.102";
-            sha256 = "sha256-Gd8p/XfRpURdwUHfnqlzWsimZfr7ClWDhg1Hqwlrlas=";
-        }
-        {
-            publisher = "jannchie";
-            name = "ruff-ignore-explainer";
-            version = "1.5.0";
-            sha256 = "sha256-+IZXfIS2YPYkRElnZnNw26GCGujX1SZmkS2w4SCZmM8=";
-        }
-    ];
-    
+    config,
+    lib,
+    pkgs,
+    ...
+}: {
+    extensions = with pkgs.vscode-extensions;
+        [
+            charliermarsh.ruff
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+            {
+                publisher = "ms-python";
+                name = "python";
+                version = "2025.13.2025090201";
+                sha256 = "sha256-Sq/XYi72oDjcGenoswtLuwzsIDwauxueo8HhuPvwWVU==";
+            }
+            {
+                publisher = "ms-python";
+                name = "vscode-pylance";
+                version = "2025.7.102";
+                sha256 = "sha256-Gd8p/XfRpURdwUHfnqlzWsimZfr7ClWDhg1Hqwlrlas=";
+            }
+            {
+                publisher = "jannchie";
+                name = "ruff-ignore-explainer";
+                version = "1.5.0";
+                sha256 = "sha256-+IZXfIS2YPYkRElnZnNw26GCGujX1SZmkS2w4SCZmM8=";
+            }
+        ];
+
     userSettings = {
         python = {
             analysis = {
@@ -45,7 +50,7 @@
 
         ruff = {
             organizeImports = true;
-            exclude = [ ];
+            exclude = [];
 
             lint.ignore = [
                 "F401"

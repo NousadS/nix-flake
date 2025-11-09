@@ -1,14 +1,16 @@
-{ config, pkgs, ... }:
-
 {
+    config,
+    pkgs,
+    ...
+}: {
     nixpkgs.hostPlatform = "x86_64-linux";
     nixpkgs.config.allowUnfree = true;
 
-    nix.settings.experimental-features = [ "nix-command" "flakes" ];
+    nix.settings.experimental-features = ["nix-command" "flakes"];
 
     nix.optimise = {
         automatic = true;
-        dates = [ "16:00" ];
+        dates = ["16:00"];
     };
 
     nix.gc = {

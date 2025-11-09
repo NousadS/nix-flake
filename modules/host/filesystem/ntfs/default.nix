@@ -1,9 +1,14 @@
-{ config, lib, pkgs, mkModule, ... } @ args:
-
+{
+    config,
+    lib,
+    pkgs,
+    mkModule,
+    ...
+} @ args:
 mkModule {
     environment.systemPackages = [
         pkgs.ntfs3g
     ];
-    
-    boot.supportedFilesystems = [ "ntfs" ];
+
+    boot.supportedFilesystems = ["ntfs"];
 }

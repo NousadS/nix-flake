@@ -1,10 +1,12 @@
-{ config, lib, pkgs, mkModule, ... } @ args:
-
+{
+    config,
+    lib,
+    pkgs,
+    mkModule,
+    ...
+} @ args:
 mkModule {
     environment.systemPackages = [
         pkgs.spotify
     ];
 }
-
-
-

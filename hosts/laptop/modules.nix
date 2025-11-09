@@ -1,7 +1,11 @@
-{ config, lib, pkgs, self, ... }:
-
 {
-    imports = [ (self + "/modules/host") ];
+    config,
+    lib,
+    pkgs,
+    self,
+    ...
+}: {
+    imports = [(self + "/modules/host")];
 
     modules.host = {
         bootloader.grub.enable = false;

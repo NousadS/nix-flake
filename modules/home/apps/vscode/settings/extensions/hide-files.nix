@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
+    config,
+    lib,
+    pkgs,
+    ...
+}: {
     extensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
             publisher = "roonie007";

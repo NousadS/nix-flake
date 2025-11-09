@@ -1,6 +1,13 @@
-{ config, lib, pkgs, mkModule, self, stylix, ... } @ args:
-
-mkModule {  
+{
+    config,
+    lib,
+    pkgs,
+    mkModule,
+    self,
+    stylix,
+    ...
+} @ args:
+mkModule {
     home.file = {
         ".config/ghostty/config".text = ''
             font-family = "MesloLGS NF"
@@ -18,8 +25,8 @@ mkModule {
 
             theme = GruvboxDarkHard
         '';
-    }; 
-    
+    };
+
     stylix.targets = {
         ghostty.enable = true;
     };

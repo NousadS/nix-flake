@@ -20,8 +20,11 @@
         alejandra.inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    outputs = { self, nixpkgs, ... } @ inputs:
-    let
+    outputs = {
+        self,
+        nixpkgs,
+        ...
+    } @ inputs: let
         system = "x86_64-linux";
 
         pkgs = nixpkgs;
@@ -31,7 +34,7 @@
             laptop = nixpkgs.lib.nixosSystem {
                 inherit system;
 
-                specialArgs = { inherit self inputs system; };
+                specialArgs = {inherit self inputs system;};
 
                 modules = [
                     ./hosts/laptop

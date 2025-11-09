@@ -1,6 +1,12 @@
-{ config, lib, pkgs, system, mkModule, ... } @ args:
-
-mkModule {  
+{
+    config,
+    lib,
+    pkgs,
+    system,
+    mkModule,
+    ...
+} @ args:
+mkModule {
     home.file.".config/alejandra/config.toml".text = ''indentation = "FourSpaces"'';
 
     home.file.".local/bin/ealejandra" = {

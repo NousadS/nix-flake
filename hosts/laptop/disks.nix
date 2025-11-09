@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+    config,
+    pkgs,
+    ...
+}: {
     fileSystems."/mnt/Projects" = {
         device = "/dev/disk/by-uuid/031342890D055036";
         fsType = "ntfs";
@@ -40,5 +42,5 @@
         ];
     };
 
-    swapDevices = [ ];
+    swapDevices = [];
 }

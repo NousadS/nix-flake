@@ -1,6 +1,12 @@
-{ config, lib, pkgs, mkModule, inputs, ... } @ args:
-
-mkModule {  
+{
+    config,
+    lib,
+    pkgs,
+    mkModule,
+    inputs,
+    ...
+} @ args:
+mkModule {
     # imports = [
     #     inputs.nix4nvchad.homeManagerModule
     # ];

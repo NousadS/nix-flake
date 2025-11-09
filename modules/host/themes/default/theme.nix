@@ -1,7 +1,12 @@
-{ config, lib, pkgs, stylix, self, ... }:
-
 {
-    # stylix.image = 
+    config,
+    lib,
+    pkgs,
+    stylix,
+    self,
+    ...
+}: {
+    # stylix.image =
     #     if config.modules.host.themes.default.wallpaper == null
     #     then self + "/assets/wallpapers/nix-gnome.png"
     #     else self + "/assets/wallpapers/" + config.modules.host.themes.default.wallpaper;
@@ -33,4 +38,3 @@
         terminal = 1.0;
     };
 }
-

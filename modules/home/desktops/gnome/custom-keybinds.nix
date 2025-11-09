@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
+    config,
+    lib,
+    pkgs,
+    ...
+}: {
     dconf.settings = {
         "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
             name = "Solaar - Editor";

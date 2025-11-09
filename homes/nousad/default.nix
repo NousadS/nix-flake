@@ -1,6 +1,10 @@
-{ config, lib, pkgs, self, ... } @ args:
-
 {
+    config,
+    lib,
+    pkgs,
+    self,
+    ...
+} @ args: {
     users.users.nousad = {
         isNormalUser = true;
         description = "nousad";
@@ -9,9 +13,9 @@
             "wheel"
             "input"
             "scanner"
-            "lp" 
+            "lp"
         ];
-        packages = [ ];
+        packages = [];
     };
 
     home-manager.users.nousad = import ./home.nix;
