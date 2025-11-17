@@ -2,6 +2,7 @@
     config,
     lib,
     pkgs,
+    self,
     ...
 } @ args: let
     fyaml = import (self + "/modules/utils/formatters/yaml.nix") {inherit pkgs;};
