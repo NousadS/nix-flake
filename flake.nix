@@ -38,8 +38,6 @@
                 modules = [
                     ./hosts/laptop
 
-                    ./modules/system/environment/var
-
                     inputs.home-manager.nixosModules.home-manager
                     inputs.stylix.nixosModules.stylix
                     inputs.solaar.nixosModules.default
