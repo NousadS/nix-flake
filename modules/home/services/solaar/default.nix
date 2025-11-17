@@ -7,10 +7,18 @@
     ...
 } @ args:
 mkModule {
-    home.file = {
-        ".config/solaar/config.yaml".source = self + "/assets/solaar/config.yaml";
-        ".config/solaar/rules.yaml".source = self + "/assets/solaar/rules.yaml";
+    imports = [
+        ./devices/logitec-pop-keys
+    ];
 
-        # ".config/autostart/solaar.desktop".source = self + "/assets/solaar/solaar.desktop";
-    };
+    # home.file.".config/autostart/solaar.desktop".text = ''
+    #     [Desktop Entry]
+    #     Type=Application
+    #     Exec=solaar -w hide
+    #     Hidden=false
+    #     NoDisplay=false
+    #     X-GNOME-Autostart-enabled=true
+    #     Name=Solaar
+    #     Comment=Start Solaar in the background (tray icon)
+    # '';
 }

@@ -8,26 +8,31 @@
     ...
 } @ args:
 mkModule {
-    home.file = {
-        ".config/ghostty/config".text = ''
-            font-family = "MesloLGS NF"
+    programs.ghostty = {
+        enable = true;
 
-            cursor-style = bar
-            cursor-style-blink = true
+        enableFishIntegration = false;
+        enableZshIntegration = true;
 
-            background-opacity = 1.0
-            background-blur = 20
+        settings = {
+            font-family = "MesloLGS NF";
 
-            window-padding-x = 2
-            window-padding-y = 2
+            cursor-style = "bar";
+            cursor-style-blink = true;
 
-            keybind = f11=toggle_fullscreen
+            background-opacity = 1.0;
+            background-blur = 20;
 
-            theme = GruvboxDarkHard
-        '';
+            window-padding-x = 2;
+            window-padding-y = 2;
+
+            keybind = [ "f11=toggle_fullscreen" ];
+
+            theme = "GruvboxDarkHard";
+        };
+
+        themes = {};
     };
 
-    stylix.targets = {
-        ghostty.enable = true;
-    };
+    stylix.targets.ghostty.enable = true;
 }
