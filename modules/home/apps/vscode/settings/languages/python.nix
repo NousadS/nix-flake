@@ -13,7 +13,7 @@
                 publisher = "ms-python";
                 name = "python";
                 version = "2025.13.2025090201";
-                sha256 = "sha256-Sq/XYi72oDjcGenoswtLuwzsIDwauxueo8HhuPvwWVU==";
+                sha256 = "sha256-oxCL1cc6unUW+d0wN4l762oD4DybJFwZxnMPydsphuk=";
             }
             {
                 publisher = "ms-python";
