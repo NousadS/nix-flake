@@ -7,6 +7,8 @@
     ...
 } @ args: {
     imports = [
+        inputs.home-manager.nixosModules.home-manager
+        
         (self + "/homes/nousad/")
     ];
 

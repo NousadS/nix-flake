@@ -4,14 +4,18 @@
     pkgs,
     stylix,
     self,
+    cfg,
     ...
 }: {
-    # stylix.image =
-    #     if config.modules.host.themes.default.wallpaper == null
-    #     then self + "/assets/wallpapers/nix-gnome.png"
-    #     else self + "/assets/wallpapers/" + config.modules.host.themes.default.wallpaper;
+    # cfg.wallpaper = self + "/assets/wallpapers/Windows.jpg";
 
-    stylix.image = self + "/assets/wallpapers/ThonkPad.jpg";
+    # stylix.image = builtins.trace "" (
+    #     if cfg.wallpaper == null
+    #     then self + "/assets/wallpapers/Linux.jpg"
+    #     else cfg.wallpaper
+    # );
+
+    stylix.image = self + "/assets/wallpapers/Linux.jpg";
 
     environment.systemPackages = [
         pkgs.papirus-icon-theme

@@ -24,10 +24,17 @@
 
     cfg = lib.attrsets.removeAttrs args ["options" "imports"];
 
+    options_cfg = config.modules.${category}.${group}.${name};
+
     trace = _: builtins.trace "Enabled ${group}.${name} as a ${category} module." _;
     enabled = config.modules.${category}.${group}.${name}.enable;
 in {
     options = opt;
     imports = imp;
-    config = lib.mkIf enabled (trace cfg);
+    config = lib.mkIf enabled (trace (cfg
+    // {
+        _module.args = {
+            cfg = options_cfg;
+        };
+    }));
 }

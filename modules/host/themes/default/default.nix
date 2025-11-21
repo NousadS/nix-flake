@@ -2,18 +2,19 @@
     config,
     lib,
     pkgs,
+    inputs,
     mkModule,
     ...
 } @ args:
 mkModule {
     options = {
-        modules.host.themes.default.theme = lib.mkOption {
+        theme = lib.mkOption {
             type = lib.types.nullOr lib.types.path;
             default = null;
             description = "path to theme";
         };
 
-        modules.host.themes.default.wallpaper = lib.mkOption {
+        wallpaper = lib.mkOption {
             type = lib.types.nullOr lib.types.path;
             default = null;
             description = "relative path to wallpaper";
@@ -21,9 +22,10 @@ mkModule {
     };
 
     imports = [
+        inputs.stylix.nixosModules.stylix
+
         ./colors.nix
         ./fonts.nix
-        ./grub.nix
         ./theme.nix
     ];
 }
