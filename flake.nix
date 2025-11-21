@@ -7,6 +7,9 @@
         home-manager.url = "github:nix-community/home-manager/release-25.05";
         home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+        sops-nix.url = "github:Mic92/sops-nix";
+        sops-nix.inputs.nixpkgs.follows = "nixpkgs";
+
         stylix.url = "github:nix-community/stylix/release-25.05";
         stylix.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -37,10 +40,6 @@
 
                 modules = [
                     ./hosts/laptop
-
-                    inputs.home-manager.nixosModules.home-manager
-                    inputs.stylix.nixosModules.stylix
-                    inputs.solaar.nixosModules.default
                 ];
             };
         };

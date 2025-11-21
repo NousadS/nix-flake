@@ -337,6 +337,7 @@
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "solaar": "solaar",
+        "sops-nix": "sops-nix",
         "stylix": "stylix"
       }
     },
@@ -400,6 +401,26 @@
       "original": {
         "type": "tarball",
         "url": "https://flakehub.com/f/Svenum/Solaar-Flake/0.1.2"
+      }
+    },
+    "sops-nix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1763607916,
+        "narHash": "sha256-VefBA1JWRXM929mBAFohFUtQJLUnEwZ2vmYUNkFnSjE=",
+        "owner": "Mic92",
+        "repo": "sops-nix",
+        "rev": "877bb495a6f8faf0d89fc10bd142c4b7ed2bcc0b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Mic92",
+        "repo": "sops-nix",
+        "type": "github"
       }
     },
     "stylix": {

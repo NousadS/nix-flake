@@ -11,3 +11,7 @@ s.nix
 # Github size restrictions
 
 assets/wallpapers/wallpapers-not-active-use.zip
+
+# Secret stuff
+
+secrets/keys.txt
