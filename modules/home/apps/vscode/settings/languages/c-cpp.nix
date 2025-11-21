@@ -8,7 +8,7 @@
         {
             publisher = "ms-vscode";
             name = "cpptools";
-            version = "1.29.0";
+            version = "1.28.3";
             sha256 = "sha256-uucLN5MjooMu/n2sRPLoZNWm5MBKLK6OPNsqMWt6EY8=";
         }
         {
@@ -35,7 +35,17 @@
         };
 
         "C_Cpp" = {
-            clang_format_fallbackStyle = "{ BasedOnStyle: Google, UseTab: Never, IndentWidth: 4, AllowShortFunctionsOnASingleLine: All, AllowShortEnumsOnASingleLine: true, AllowShortIfStatementsOnASingleLine: AllIfsAndElse, AllowShortLoopsOnASingleLine: true, ColumnLimit: 88 }";
+            clang_format_fallbackStyle = "{ 
+                BasedOnStyle: Google, 
+                UseTab: Never, 
+                IndentWidth: 4, 
+                AllowShortFunctionsOnASingleLine: All, 
+                AllowShortEnumsOnASingleLine: true, 
+                AllowShortIfStatementsOnASingleLine: AllIfsAndElse, 
+                AllowShortLoopsOnASingleLine: true, 
+                ColumnLimit: 88 
+            }";
+
             clang_format_sortIncludes = true;
 
             vcFormat.indent.caseContentsWhenBlock = true;
