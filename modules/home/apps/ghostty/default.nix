@@ -26,7 +26,7 @@ mkModule {
             window-padding-x = 2;
             window-padding-y = 2;
 
-            keybind = [ "f11=toggle_fullscreen" ];
+            keybind = ["f11=toggle_fullscreen"];
 
             theme = "GruvboxDarkHard";
         };
@@ -35,4 +35,6 @@ mkModule {
     };
 
     stylix.targets.ghostty.enable = true;
+
+    home.sessionVariables.TERMINAL = "ghostty";
 }

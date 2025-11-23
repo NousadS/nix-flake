@@ -19,4 +19,6 @@ mkModule {
     };
 
     stylix.targets.vscode.enable = true;
+
+    home.sessionVariables.VISUAL = "code";
 }
