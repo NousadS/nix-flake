@@ -6,6 +6,12 @@
     ...
 } @ args:
 mkModule {
+    services.xserver.xkb = {
+        layout = "us,ru,de,gr";
+        variant = ",,,polytonic";
+        options = "grp:win_space_toggle";
+    };
+    
     time.timeZone = "Europe/Berlin";
 
     i18n.defaultLocale = "en_US.UTF-8";

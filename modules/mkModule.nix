@@ -22,19 +22,19 @@
 
     imp = args.imports or [];
 
-    cfg = lib.attrsets.removeAttrs args ["options" "imports"];
+    cfg = config.modules.${category}.${group}.${name};
 
-    options_cfg = config.modules.${category}.${group}.${name};
+    bdy =
+        lib.attrsets.removeAttrs args ["options" "imports"]
+        // {
+            _module.args = {
+                inherit cfg;
+            };
+        };
 
     trace = _: builtins.trace "Enabled ${group}.${name} as a ${category} module." _;
-    enabled = config.modules.${category}.${group}.${name}.enable;
 in {
     options = opt;
     imports = imp;
-    config = lib.mkIf enabled (trace (cfg
-    // {
-        _module.args = {
-            cfg = options_cfg;
-        };
-    }));
+    config = lib.mkIf config.modules.${category}.${group}.${name}.enable (trace bdy);
 }
