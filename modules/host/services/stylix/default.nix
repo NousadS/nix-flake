@@ -2,12 +2,11 @@
     config,
     lib,
     pkgs,
+    inputs,
     mkModule,
     ...
 } @ args:
 mkModule {
-    stylix.enable = true;
-
     imports = [
         inputs.stylix.nixosModules.stylix
 
@@ -15,4 +14,6 @@ mkModule {
         ./fonts.nix
         ./theme.nix
     ];
+
+    stylix.enable = true;
 }
