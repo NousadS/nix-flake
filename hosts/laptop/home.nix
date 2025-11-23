@@ -8,14 +8,16 @@
 } @ args: {
     imports = [
         inputs.home-manager.nixosModules.home-manager
-        
+
         (self + "/homes/nousad/")
     ];
 
-    home-manager.useGlobalPkgs = true;
-    home-manager.useUserPackages = true;
+    home-manager = {
+        useGlobalPkgs = true;
+        useUserPackages = true;
 
-    home-manager.backupFileExtension = "backup";
+        backupFileExtension = "backup";
 
-    home-manager.extraSpecialArgs = inputs // {inherit inputs self system;};
+        extraSpecialArgs = inputs // {inherit inputs self system;};
+    };
 }

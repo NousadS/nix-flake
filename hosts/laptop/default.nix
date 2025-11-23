@@ -4,11 +4,16 @@
     ...
 }: {
     imports = [
+        ./disks/ssd.nix
+        ./disks/hdd.nix
+        ./disks/swap.nix
+
         ./hardware.nix
+
         ./configuration.nix
-        ./disks.nix
         ./nix.nix
-        ./home.nix
         ./modules.nix
+
+        ./home.nix
     ];
 }
