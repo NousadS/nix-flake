@@ -4,7 +4,4 @@
     pkgs,
     ...
 }: {
-    dconf.settings = {
-        
-    };
 }
