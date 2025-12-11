@@ -7,7 +7,7 @@
 } @ args:
 mkModule {
     services.xserver.displayManager.gdm.enable = true;
-    
+
     programs.dconf.profiles."gdm".databases = [
         {
             settings = {
