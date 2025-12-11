@@ -11,5 +11,5 @@ mkModule {
         pkgs.xclip
     ];
 
-    services.xserver.desktopManager.gnome.enable = true;
+    services.desktopManager.gnome.enable = true;
 }

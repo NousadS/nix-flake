@@ -10,7 +10,7 @@
         pkgs.fira-mono
         pkgs.fira-sans
         pkgs.meslo-lgs-nf
-        pkgs.noto-fonts-emoji
+        pkgs.noto-fonts-color-emoji
     ];
 
     stylix.fonts = {
@@ -30,7 +30,7 @@
         };
 
         emoji = {
-            package = pkgs.noto-fonts-emoji;
+            package = pkgs.noto-fonts-color-emoji;
             name = "Noto Color Emoji";
         };
 
