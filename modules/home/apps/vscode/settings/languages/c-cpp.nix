@@ -9,7 +9,7 @@
             publisher = "ms-vscode";
             name = "cpptools";
             version = "1.28.3";
-            sha256 = "sha256-uucLN5MjooMu/n2sRPLoZNWm5MBKLK6OPNsqMWt6EY8=";
+            sha256 = "sha256-OGYN1euviPvChlTiRzdOV+/XbBUYaLKe3QgiC+6EZwg=";
         }
         {
             publisher = "jeff-hykin";

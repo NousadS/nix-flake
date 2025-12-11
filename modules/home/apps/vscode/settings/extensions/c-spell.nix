@@ -38,6 +38,7 @@
     userSettings = {
         cSpell = {
             language = "en,ru";
+            diagnosticLevel = "hint";
 
             userWords = [
                 "aiogram"
