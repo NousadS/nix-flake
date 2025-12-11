@@ -2,15 +2,15 @@
     description = "Nousad's flake";
 
     inputs = {
-        nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+        nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
 
-        home-manager.url = "github:nix-community/home-manager/release-25.05";
+        home-manager.url = "github:nix-community/home-manager/release-25.11";
         home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
         sops-nix.url = "github:Mic92/sops-nix";
         sops-nix.inputs.nixpkgs.follows = "nixpkgs";
 
-        stylix.url = "github:nix-community/stylix/release-25.05";
+        stylix.url = "github:nix-community/stylix/release-25.11";
         stylix.inputs.nixpkgs.follows = "nixpkgs";
 
         solaar.url = "https://flakehub.com/f/Svenum/Solaar-Flake/0.1.2";
