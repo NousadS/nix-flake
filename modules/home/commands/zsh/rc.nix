@@ -3,7 +3,12 @@
     lib,
     pkgs,
     ...
-} @ args:
-{
-    home.file.".zshrc".source = ./rc.zsh;
+} @ args: {
+    programs.zsh.initContent = ''
+        ###
+
+        ${builtins.readFile ./rc.zsh}
+        
+        ###
+    '';
 }
