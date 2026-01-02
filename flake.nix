@@ -18,6 +18,13 @@
 
         alejandra.url = "github:kamadorueda/alejandra/4.0.0";
         alejandra.inputs.nixpkgs.follows = "nixpkgs";
+
+        niri.url = "github:sodiboo/niri-flake";
+
+        noctalia.url = "github:noctalia-dev/noctalia-shell";
+        noctalia.inputs.nixpkgs.follows = "nixpkgs";
+
+        awww.url = "git+https://codeberg.org/LGFae/awww";
     };
 
     outputs = {

@@ -28,7 +28,7 @@ mkModule {
 
             keybind = ["f11=toggle_fullscreen"];
 
-            theme = "GruvboxDarkHard";
+            theme = "Gruvbox Dark Hard";
         };
 
         themes = {};

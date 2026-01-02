@@ -13,6 +13,7 @@
         "common/explorer"
         "common/files"
         "common/fonts"
+        "common/other"
         "common/terminal"
         "common/window"
         "common/workbench"

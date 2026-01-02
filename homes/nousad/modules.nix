@@ -9,5 +9,6 @@
 
     modules.home = {
         commands.neovim.enable = false;
+        apps.ghostty.enable = false;
     };
 }
