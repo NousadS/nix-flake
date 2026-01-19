@@ -167,7 +167,8 @@ mkModule {
                 audioSource = "default_output";
                 videoSource = "portal";
             };
-            wallpaper = {enabled = true;
+            wallpaper = {
+                enabled = true;
             };
             appLauncher = {
                 enableClipboardHistory = true;
@@ -348,6 +349,21 @@ mkModule {
                 manualSunrise = "06:30";
                 manualSunset = "18:30";
             };
+        };
+    };
+
+    programs.niri.settings.binds = {
+        "Mod+R" = {
+            action.spawn-sh = "noctalia-shell ipc call launcher toggle";
+        };
+        "Mod+C" = {
+            action.spawn-sh = "noctalia-shell ipc call launcher clipboard";
+        };
+        "Mod+Period" = {
+            action.spawn-sh = "noctalia-shell ipc call launcher emoji";
+        };
+        "Mod+L" = {
+            action.spawn-sh = "noctalia-shell ipc call lockScreen lock";
         };
     };
 }

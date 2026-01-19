@@ -23,5 +23,10 @@
 
         commands.devenv.enable = false;
         commands.neovim.enable = false;
+
+        services.noctalia.enable = true;
+        services.dank-shell.enable = false;
+        services.dank-greeter.enable = false;
+        services.gdm.enable = true;
     };
 }

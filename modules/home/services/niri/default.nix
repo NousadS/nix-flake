@@ -22,18 +22,6 @@ mkModule {
             "Mod+M" = {
                 action.quit = {};
             };
-            "Mod+R" = {
-                action.spawn-sh = "noctalia-shell ipc call launcher toggle";
-            };
-            "Mod+C" = {
-                action.spawn-sh = "noctalia-shell ipc call launcher clipboard";
-            };
-            "Mod+Period" = {
-                action.spawn-sh = "noctalia-shell ipc call launcher emoji";
-            };
-            "Mod+L" = {
-                action.spawn-sh = "noctalia-shell ipc call lockScreen lock";
-            };
 
             "Ctrl+Mod+Down" = {
                 action.focus-window-or-workspace-down = {};

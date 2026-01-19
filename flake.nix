@@ -20,11 +20,13 @@
         alejandra.inputs.nixpkgs.follows = "nixpkgs";
 
         niri.url = "github:sodiboo/niri-flake";
+        niri.inputs.nixpkgs.follows = "nixpkgs";
 
         noctalia.url = "github:noctalia-dev/noctalia-shell";
         noctalia.inputs.nixpkgs.follows = "nixpkgs";
 
-        awww.url = "git+https://codeberg.org/LGFae/awww";
+        dms.url = "github:AvengeMedia/DankMaterialShell/stable";
+        dms.inputs.nixpkgs.follows = "nixpkgs";
     };
 
     outputs = {
