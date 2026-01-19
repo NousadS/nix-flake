@@ -41,6 +41,7 @@
         "extensions/rename-replace"
         "extensions/vscord"
 
+        "languages/android"
         "languages/binary"
         "languages/c-cpp"
         "languages/css"
