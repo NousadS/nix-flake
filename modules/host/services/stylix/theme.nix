@@ -15,7 +15,7 @@
     #     else cfg.wallpaper
     # );
 
-    stylix.image = self + "/assets/wallpapers/Linux.jpg";
+    stylix.image = self + "/assets/wallpapers/Linuxy.jpg";
 
     environment.systemPackages = [
         pkgs.papirus-icon-theme
