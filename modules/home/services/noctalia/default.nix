@@ -321,14 +321,14 @@ mkModule {
                 enableDdcSupport = false;
             };
             colorSchemes = {
-                useWallpaperColors = false;
+                useWallpaperColors = true;
                 predefinedScheme = "Gruvbox";
+                matugenSchemeType = "scheme-neutral";
                 darkMode = true;
-                schedulingMode = "off";
+                generateTemplatesForPredefined = true;
                 manualSunrise = "06:30";
                 manualSunset = "18:30";
-                matugenSchemeType = "scheme-fruit-salad";
-                generateTemplatesForPredefined = true;
+                schedulingMode = "off";
             };
             templates = {
                 gtk = true;
