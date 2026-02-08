@@ -13,13 +13,7 @@ mkModule {
         pkgs.cnijfilter2
     ];
 
-    hardware.sane.enable = true;
-    hardware.sane.extraBackends = [
-        pkgs.sane-backends
-    ];
-
     environment.systemPackages = [
         pkgs.cups-printers
-        pkgs.simple-scan
     ];
 }

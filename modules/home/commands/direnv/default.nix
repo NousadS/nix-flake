@@ -3,11 +3,11 @@
     lib,
     pkgs,
     mkModule,
-    self,
     ...
 } @ args:
 mkModule {
-    imports = [
-        ./devices/logitec-pop-keys.nix
-    ];
+    programs.direnv = {
+  enable = true;
+  nix-direnv.enable = true;
+};
 }

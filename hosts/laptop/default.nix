@@ -1,19 +1,34 @@
 {
     config,
     pkgs,
+    lib,
+    self,
+    # system,
+    # inputs,
+    # specialArgs,
+    # options,
+    # modulesPath,
+    # _class,
+    # _prefix,
     ...
-}: {
+}@ args: {
     imports = [
-        ./disks/ssd.nix
-        ./disks/hdd.nix
-        ./disks/swap.nix
+        ./hardware/graphics.nix
+        ./hardware/hardware.nix
+        ./hardware/hdd.nix
+        ./hardware/ssd.nix
+        ./hardware/swap.nix
 
-        ./hardware.nix
+        ./system/environment.nix
+        ./system/meta.nix
+        
+        #
 
-        ./configuration.nix
-        ./nix.nix
-        ./modules.nix
-
-        ./home.nix
+        (import "${self}/lib/configurations/mkHome.nix" args "nousad")
     ];
+
+    modules.host = {
+        system.systemd.enable = false;
+        system.grub.enable = true;
+    };
 }
