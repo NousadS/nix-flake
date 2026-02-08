@@ -12,6 +12,7 @@
       ];
 
     userSettings = {
+      prettier.tabWidth = 4;
     };
   };
 }

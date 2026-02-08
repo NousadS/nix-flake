@@ -142,6 +142,8 @@
           ];
         };
       };
+
+      workbench.iconTheme = "material-icon-theme";
     };
   };
 }

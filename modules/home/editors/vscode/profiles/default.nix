@@ -6,6 +6,13 @@
 }@args:
 {
   imports = [
+    ../options/common/editor.nix
+    ../options/common/explorer.nix
+    ../options/common/files.nix
+    ../options/common/keyboard.nix
+    ../options/common/terminal.nix
+    ../options/common/window.nix
+
     ../options/editors/hexeditor.nix
     ../options/editors/sqlite.nix
 
@@ -26,6 +33,8 @@
     ../options/extensions/spell.nix
     ../options/extensions/vscord.nix
 
+    ../options/keybinds/default.nix
+
     ../options/languages/asm.nix
     ../options/languages/c-cpp.nix
     ../options/languages/gleam.nix
@@ -37,7 +46,6 @@
     ../options/languages/rust.nix
     ../options/languages/shell.nix
     ../options/languages/svelte.nix
-
 
     ../options/markup/ansi.nix
     ../options/markup/comments.nix
@@ -52,87 +60,10 @@
     ../options/markup/xml.nix
     ../options/markup/yaml.nix
 
-    ../options/themes/material-icons.nix
+    ../options/theming/fira-fonts.nix
+    ../options/theming/line-smooth-cursors.nix
+    ../options/theming/material-icons.nix
+    ../options/theming/stylix-theme.nix
   ];
-  programs.vscode.profiles.default = {
-    keybindings = [
-      {
-        key = "ctrl+/";
-        command = "workbench.action.addComment";
-        when = "activeCursorHasCommentingRange";
-      }
-      {
-        key = "ctrl+shift+o";
-        command = "editor.action.organizeImports";
-        when = "textInputFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/";
-      }
-      {
-        key = "ctrl+shift+i";
-        command = "editor.action.formatDocument";
-        when = "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor";
-      }
-      {
-        key = "ctrl+[Backquote]";
-        command = "workbench.action.terminal.toggleTerminal";
-        when = "terminal.active";
-      }
-    ];
-    userSettings = {
-      files = {
-        exclude."**/.vscode" = true;
-        autoGuessEncoding = true;
-        autoSave = "afterDelay";
-      };
 
-
-      "debug.allowBreakpointsEverywhere" = true;
-
-      editor = {
-        fontFamily = "'Fira Code'";
-        fontSize = 14;
-        fontLigatures = true;
-        cursorBlinking = "expand";
-        cursorSmoothCaretAnimation = "on";
-        cursorStyle = "line-thin";
-        selectionClipboard = false;
-        autoClosingDelete = "never";
-        formatOnSave = true;
-        linkedEditing = true;
-        stickyScroll.enabled = false;
-        rulers = [ 88 ];
-      };
-
-      terminal.integrated = {
-        fontFamily = "'Fira Code', 'MesloLGS NF'";
-        fontSize = 11;
-        fontLigatures = true;
-        cursorStyle = "underline";
-        cursorStyleInactive = "underline";
-      };
-      keyboard.dispatch = "keyCode";
-      terminal = {
-        integrated = {
-          defaultProfile.windows = "Command Prompt";
-          defaultProfile.linux = "zsh";
-        };
-
-        explorerKind = "external";
-        external.linuxExec = "/usr/bin/zsh";
-      };
-      window.titleBarStyle = "custom";
-      workbench = {
-        iconTheme = "material-icon-theme";
-        colorTheme = "Stylix";
-        startupEditor = "none";
-      };
-
-      explorer = {
-        confirmDragAndDrop = false;
-        confirmDelete = true;
-        compactFolders = false;
-        confirmPasteNative = false;
-      };
-      prettier.tabWidth = 4;
-    };
-  };
 }
