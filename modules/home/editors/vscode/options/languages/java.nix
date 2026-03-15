@@ -18,7 +18,7 @@
         vscjava.vscode-spring-initializr
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-        
+
       ];
 
     userSettings = {
@@ -38,6 +38,8 @@
       "java.format.enabled" = true;
       "java.completion.enabled" = true;
       "java.autostart" = true;
+
+      "redhat.telemetry.enabled" = false;
     };
   };
 }

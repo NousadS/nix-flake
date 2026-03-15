@@ -7,9 +7,7 @@
 }@args:
 mkModule {
   home.packages = [
-    pkgs.jdk17
-    # pkgs.jdk21
-    pkgs.maven
-    pkgs.gradle
+    pkgs.jetbrains.idea-community
+    # pkgs.jetbrains.jdk
   ];
 }
