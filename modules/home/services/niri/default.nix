@@ -23,29 +23,29 @@ mkModule {
                 action.quit = {};
             };
 
-            "Ctrl+Mod+Down" = {
+            "Ctrl+Mod+J" = {
                 action.focus-window-or-workspace-down = {};
             };
-            "Ctrl+Mod+Up" = {
+            "Ctrl+Mod+K" = {
                 action.focus-window-or-workspace-up = {};
             };
-            "Ctrl+Mod+Left" = {
+            "Ctrl+Mod+H" = {
                 action.focus-column-left = {};
             };
-            "Ctrl+Mod+Right" = {
+            "Ctrl+Mod+L" = {
                 action.focus-column-right = {};
             };
 
-            "Mod+Left" = {
+            "Mod+H" = {
                 action.swap-window-left = {};
             };
-            "Mod+Right" = {
+            "Mod+L" = {
                 action.swap-window-right = {};
             };
-            "Mod+Down" = {
+            "Mod+J" = {
                 action.swap-window-left = {};
             };
-            "Mod+Up" = {
+            "Mod+K" = {
                 action.swap-window-right = {};
             };
 
@@ -60,16 +60,16 @@ mkModule {
                 action.screenshot = {};
             };
 
-            "Shift+Mod+Left" = {
+            "Shift+Mod+H" = {
                 action.set-column-width = "-10%";
             };
-            "Shift+Mod+Right" = {
+            "Shift+Mod+L" = {
                 action.set-column-width = "+10%";
             };
-            "Shift+Mod+Up" = {
+            "Shift+Mod+K" = {
                 action.set-window-height = "-10%";
             };
-            "Shift+Mod+Down" = {
+            "Shift+Mod+J" = {
                 action.set-window-height = "+10%";
             };
 
@@ -86,16 +86,16 @@ mkModule {
                 action.toggle-window-floating = {};
             };
 
-            "Mod+Alt+Left" = {
+            "Mod+Alt+H" = {
                 action.spawn = ["niri" "msg" "action" "move-floating-window" "-x" "-50" "-y" "+0"];
             };
-            "Mod+Alt+Right" = {
+            "Mod+Alt+L" = {
                 action.spawn = ["niri" "msg" "action" "move-floating-window" "-x" "+50" "-y" "+0"];
             };
-            "Mod+Alt+Up" = {
+            "Mod+Alt+K" = {
                 action.spawn = ["niri" "msg" "action" "move-floating-window" "-x" "+0" "-y" "-50"];
             };
-            "Mod+Alt+Down" = {
+            "Mod+Alt+J" = {
                 action.spawn = ["niri" "msg" "action" "move-floating-window" "-x" "+0" "-y" "+50"];
             };
             "Mod+Alt+Return" = {

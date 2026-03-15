@@ -362,7 +362,7 @@ mkModule {
         "Mod+Period" = {
             action.spawn-sh = "noctalia-shell ipc call launcher emoji";
         };
-        "Mod+L" = {
+        "Mod+S" = {
             action.spawn-sh = "noctalia-shell ipc call lockScreen lock";
         };
     };
