@@ -16,9 +16,9 @@
             icon-theme = "Papirus-Dark";
             gtk-theme = "adw-gtk3";
 
-            document-font-name = "Fira Code Regular  10";
-            font-name = "Fira Code Regular 11";
-            monospace-font-name = "MesloLGS NF 11";
+            # document-font-name = "Fira Code Regular  10";
+            # font-name = "Fira Code Regular 11";
+            # monospace-font-name = "MesloLGS NF 11";
         };
     };
 }

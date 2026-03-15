@@ -7,14 +7,6 @@
     cfg,
     ...
 }: {
-    # cfg.wallpaper = self + "/assets/wallpapers/Windows.jpg";
-
-    # stylix.image = builtins.trace "" (
-    #     if cfg.wallpaper == null
-    #     then self + "/assets/wallpapers/Linux.jpg"
-    #     else cfg.wallpaper
-    # );
-
     stylix.image = self + "/assets/wallpapers/Linuxy.jpg";
 
     environment.systemPackages = [

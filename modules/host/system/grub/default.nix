@@ -1,57 +1,53 @@
 {
-    config,
-    lib,
-    pkgs,
-    mkModule,
-    ...
-} @ args: let
-    theme = pkgs.minimal-grub-theme;
+  config,
+  lib,
+  pkgs,
+  mkModule,
+  self,
+  ...
+}@args:
+let
+  theme = pkgs.minimal-grub-theme;
 in
-    mkModule {
-        boot.loader = {
-            systemd-boot.enable = false;
+mkModule {
+  boot.loader = {
+    systemd-boot.enable = false;
 
-            grub = {
-                enable = true;
-                device = "nodev";
-                efiSupport = true;
+    grub = {
+      enable = true;
+      device = "nodev";
+      efiSupport = true;
 
-                gfxmodeEfi = "1368x768";
-                gfxmodeBios = "1368x768";
-                gfxpayloadEfi = "keep";
-                gfxpayloadBios = "keep";
+      gfxmodeEfi = "1368x768";
+      gfxmodeBios = "1368x768";
+      gfxpayloadEfi = "keep";
+      gfxpayloadBios = "keep";
 
-                theme = lib.mkForce "${theme}/";
-                font = lib.mkForce "${pkgs.fira-mono}/share/fonts/opentype/FiraMono-Regular.otf";
-                fontSize = lib.mkForce 16;
+      theme = lib.mkForce "${theme}/";
+      font = lib.mkForce "${self}/assets/grub/FiraMono.pf2";
+      fontSize = lib.mkForce 16;
 
-                extraConfig = ''
-                    insmod all_video
-                    insmod efi_gop
-                    insmod efi_uga
-                    insmod gfxterm
-                    insmod gfxmenu
+      extraConfig = ''
+        insmod all_video
+        insmod efi_gop
+        insmod efi_uga
+        insmod gfxterm
+        insmod gfxmenu
 
-                    terminal_output gfxterm
-                '';
+        terminal_output gfxterm
+      '';
 
-                useOSProber = false;
-                extraEntriesBeforeNixOS = false;
-                extraEntries = ''
-                    menuentry "Windows" --class windows --class os {
-                        insmod part_gpt
-                        insmod fat
-                        search --fs-uuid --set=root 0809-C1E8
-                        chainloader /EFI/Microsoft/Boot/bootmgfw.efi
-                    }
-                '';
+      useOSProber = false;
+      extraEntriesBeforeNixOS = false;
+      extraEntries = ''
+      '';
 
-                copyKernels = true;
-                efiInstallAsRemovable = false;
-            };
+      copyKernels = true;
+      efiInstallAsRemovable = false;
+    };
 
-            efi.canTouchEfiVariables = true;
-        };
+    efi.canTouchEfiVariables = true;
+  };
 
-        stylix.targets.grub.enable = true;
-    }
+  stylix.targets.grub.enable = true;
+}

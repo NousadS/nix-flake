@@ -16,17 +16,4 @@
             "dmask=0077"
         ];
     };
-
-    fileSystems."/mnt/Windows" = {
-        device = "/dev/disk/by-uuid/BC1869AC1869667C";
-        fsType = "ntfs";
-        options = [
-            "noauto"
-            "nosuid"
-            "nodev"
-            "nofail"
-            "x-gvfs-show"
-            "x-gvfs-name=Windows"
-        ];
-    };
 }

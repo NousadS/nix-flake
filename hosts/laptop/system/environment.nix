@@ -11,6 +11,7 @@
 
     environment.localBinInPath = true;
     nixpkgs.config.allowUnfree = true;
+    
     # nixpkgs.overlays = [
     #     "${self}/overlays"
     # ];
