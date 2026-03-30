@@ -14,6 +14,8 @@
     pkgs.noto-fonts-color-emoji
   ];
 
+  fonts.fontconfig.enable = true;
+
   stylix.fonts = {
     serif = {
       package = pkgs.fira-code;
