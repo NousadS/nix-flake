@@ -2,14 +2,10 @@
   config,
   lib,
   pkgs,
-  mkModule,
   self,
   ...
-}@args:
-let
-  theme = pkgs.minimal-grub-theme;
-in
-mkModule {
+}:
+{
   boot.loader = {
     systemd-boot.enable = false;
 
@@ -23,7 +19,7 @@ mkModule {
       gfxpayloadEfi = "keep";
       gfxpayloadBios = "keep";
 
-      theme = lib.mkForce "${theme}/";
+      theme = lib.mkForce "${pkgs.minimal-grub-theme}/";
       font = lib.mkForce "${self}/assets/grub/FiraMono.pf2";
       fontSize = lib.mkForce 16;
 
@@ -39,8 +35,7 @@ mkModule {
 
       useOSProber = false;
       extraEntriesBeforeNixOS = false;
-      extraEntries = ''
-      '';
+      extraEntries = '''';
 
       copyKernels = true;
       efiInstallAsRemovable = false;

@@ -27,6 +27,4 @@ mkModule {
             };
         };
     };
-    
-    services.blueman.enable = true;
 }
